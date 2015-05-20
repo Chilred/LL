@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+ul, li	{ list-style-type:none; padding:0px; margin:0px; }
+
+/*Cursor:Pointer*/
+.draggable, .snapTarget	{ cursor:pointer;  }
+
+/*Modulbereiche*/
+.wrapper { min-width:320px; padding:8px;  }
+
+
+/*MODULE*/
+
+/*Drag Drop*/
+.draggable { padding:0.5em; margin:0.1em; min-height:50px; border:1px solid #006;  background-color:#CCC; z-index:50;}
+
+.solutions > ul > li:last-child { border-bottom:none; }
+.solutions > ul > li div { display:inline; float:left; padding:0.5em; margin:0.1em; min-height:49px; }	
+.solutions > ul > li div:first-child { border:#666 dashed 1px; background-color:#DEF3E6; }
+.solutions > ul > li div:last-child { border:#666 solid 1px;  background-color:#CEE3D0; }
