@@ -8,7 +8,6 @@ ul, li	{ list-style-type:none; padding:0px; margin:0px; }
 /*Modulbereiche*/
 .wrapper { min-width:320px; padding:8px;  }
 
-
 /*MODULE*/
 
 /*Drag Drop*/
@@ -18,3 +17,14 @@ ul, li	{ list-style-type:none; padding:0px; margin:0px; }
 .solutions > ul > li div { display:inline; float:left; padding:0.5em; margin:0.1em; min-height:49px; }	
 .solutions > ul > li div:first-child { border:#666 dashed 1px; background-color:#DEF3E6; }
 .solutions > ul > li div:last-child { border:#666 solid 1px;  background-color:#CEE3D0; }
+
+
+/*Erweitert von M.W*/
+div > img {
+    width:500px;
+	height:300px
+}
+div > video {
+    width:500px;
+	height:300px
+}
