@@ -29,64 +29,49 @@
     <script src="src/js/gallery.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/multiple-choice.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/single-choice.js" type="text/javascript" charset="utf-8"></script>
+	<!-- Fathom -->
+	<link href="src/css/fathom.sample.css" rel="stylesheet" type="text/css" />
+	<script src="src/js/fathom.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#presentation").fathom();
+		});
+	</script>
 </head>
 <body>
 <div class="container">
     <nav class="mainNavigation"></nav>
-	<div class="col-md-3 col-xs-3">
+	<!-- <div class="col-md-3 col-xs-3">
 		<h1>WBT</h1>
 		<h2>Fit ohne Geräte</h2>
        <p>Hier kommt das Text.</p>
-    </div>
-    <div class="col-md-9 col-xs-9">
-	<div class="proba">sho iamt</div>
-    <div class="row">
-			<section data-linear="1">
-                  <h1>WBT</h1>
-                <article>	
-                    <h2>Fit ohne Geräte</h2>
-                    <!-- <div class="module accordion" >
-						<p data-title="...">Willkommen Seite<br/><br/><img src="data/images/Slide-1.jpg" alt="übung1"/></p>					
-                    </div> -->
-					<div class="kurs-starten">Kurs starten</div>
-                </article>
-            </section>
-			<section data-linear="2">
-                <h1>Lektionen</h1>
-                <article>
-                    <h2>Lektion 1</h2>
-                    <div class="module gallery">
-                        <div data-src="data/images/Slide-1.jpg">Hier gehen nur Bilder! Texte können in dieser Gallerie nur wie hier oder als Bild eingebunden werden!</div>
-                        <div data-src="data/images/Slide-2.jpg">Videos sind ebenfalls nicht möglich!</div>
-                    </div>
-                </article>
-                <article>
-                    <h2>Lektion 2</h2>
-                     <div class="module accordion" >
-						<p data-title="Header-Title1">Übung 2 Text<br/><br/><img src="data/images/Slide-1.jpg" alt="übung1"/></p>					
-                    </div>
-					<div class="module video"><p data-src="data/video/cat.mp4"></p></div>
-                </article>
-                  <article>
-                    <h2>Lektion 3</h2>
-					<div id="myCarousel" class="carousel slide" data-interval="false" style="width:500px height:300px>
-					  <ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<li data-target="#myCarousel" data-slide-to="2"></li>
-					  </ol>
-					  <!-- Carousel items -->
-					  <div class="carousel-inner" >
-						<div class="active item"><img class="img-responsive center-block" src="data/images/Slide-1.jpg" width="500" height="300"></div>
-						<div class="item"><video width="500" height="300" class="img-responsive center-block"><source src="data/video/small.ogv" type="video/ogg" /></video></div>
-						<div class="item"><img class="img-responsive center-block" src="data/images/Slide-2.jpg" width="500" height="300"></div>
-					  </div>
-					  <!-- Carousel nav -->
-					  <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-					  <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-					</div>						
-                </article>
-            </section>
+    </div>-->
+    <div class="col-md-1 col-xs-1"></div>
+	<div class="col-md-11 col-xs-11">
+	<div class="row">
+		 <div id="presentation">
+			<div class="slide">
+				<section data-linear="1">
+					  <h1>WBT</h1>
+					<article>	
+						<h2>Fit ohne Geräte</h2>
+						<!-- <div class="module accordion" >
+							<p data-title="...">Willkommen Seite<br/><br/><img src="data/images/Slide-1.jpg" alt="übung1"/></p>					
+						</div> -->
+						<div class="kurs-starten">Kurs starten</div>
+					</article>
+				</section>
+			</div>
+			<div class="slide">
+				<section data-linear="2">
+					<h1>Lektionen</h1>
+					<article>
+						<h2>Lektion 1</h2>
+					</article>
+				</section>
+			</div>
+		</div>
 			<section data-linear="2">
                 <h1>Glossar</h1>
                 <article>
