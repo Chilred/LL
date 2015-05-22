@@ -777,11 +777,8 @@ App.NavigationManager = {
         // start with the html content
         var HTMLcontent = "<div class=\"container-fluid\">";
 
-			        HTMLcontent += '<div class="navbar-header"><button type="button" class="navbar-toggle2">WBT - Fit ohne Geräte</button>'
-
-		
-        // add the navbar header   div class="nav-titel"></div>
-        HTMLcontent += '<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#'+navBarID+'"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>'
+        // add the navbar header
+        HTMLcontent += '<div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#'+navBarID+'"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>'
 
         // first part of the collapsable navbar
         HTMLcontent += '<div class="collapse navbar-collapse" id="'+navBarID+'"><ul class="nav navbar-nav">';
