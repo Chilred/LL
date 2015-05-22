@@ -1,0 +1,41 @@
+diff a/_demo/index_mainNav.html b/_demo/index_mainNav.html	(rejected hunks)
+@@ -7,8 +7,8 @@
+     <title>WBT</title>
+    <!-- Styles -->
+     <link rel="stylesheet" href="src/css/wbtStyle.css"/>
+-    <link rel="stylesheet" href="src/css/bootstrap.min.css"/>
+-    <link rel="stylesheet" href="src/css/bootstrap-theme.min.css"/>
++    <link rel="stylesheet" href="src/css/bootstrap.css"/>
++    <link rel="stylesheet" href="src/css/bootstrap-theme.css"/>
+    <!-- JS -->
+     <script src="src/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+     <script src="src/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+@@ -32,16 +32,23 @@
+ </head>
+ <body>
+ <div class="container">
+-    <div class="col-md-9 col-xs-9">
+     <nav class="mainNavigation"></nav>
++	<div class="col-md-3 col-xs-3">
++		<h1>WBT</h1>
++		<h2>Fit ohne Geräte</h2>
++       <p>Hier kommt das Text.</p>
++    </div>
++    <div class="col-md-9 col-xs-9">
++	<div class="proba">sho iamt</div>
+     <div class="row">
+ 			<section data-linear="1">
+-                  <h1>Start</h1>
+-                <article>
++                  <h1>WBT</h1>
++                <article>	
+                     <h2>Fit ohne Geräte</h2>
+-                    <div class="module accordion" >
++                    <!-- <div class="module accordion" >
+ 						<p data-title="...">Willkommen Seite<br/><br/><img src="data/images/Slide-1.jpg" alt="übung1"/></p>					
+-                    </div>
++                    </div> -->
++					<div class="kurs-starten">Kurs starten</div>
+                 </article>
+             </section>
+ 			<section data-linear="2">
