@@ -57,8 +57,14 @@ App.ModuleManager.extend("Video", //registriet Modul in framework.js
                 // generates a unique id for this module
                 objectID = App.Helper.generateUniqueID();
 
+                // bootstrap width for video tag
+				var widthClass = '';
+				if(thisObject.data('video-width')) {
+					widthClass = " col-md-" + thisObject.data('video-width') + " col-xs-" + thisObject.data('video-width');
+				}
+				
                 // first part of video tag
-                var htmlContent = '<div class=\"container-fluid\"><video controls id="'+objectID+'" class="col-md-12 col-xs-12">';
+                var htmlContent = '<div class=\"container-fluid' + widthClass + '\"><video controls id="'+objectID+'" class="col-md-12 col-xs-12">';
 
                 // for every p (data) entry generate a panel
                 content.each(function(index){
