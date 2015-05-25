@@ -61,7 +61,7 @@ dfn {
 }
 h1 {
   margin: .67em 0;
-  font-size: 1em;
+  font-size: 2em;
 }
 mark {
   color: #000;
@@ -984,13 +984,11 @@ hr {
   overflow: visible;
   clip: auto;
 }
-h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-.h1,
 .h2,
 .h3,
 .h4,
@@ -1000,6 +998,12 @@ h6,
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
+}
+h1,
+.h1 {
+
+font-weight: 5;
+visibility: hidden;
 }
 h1 small,
 h2 small,
@@ -1029,15 +1033,18 @@ h6 .small,
   line-height: 1;
   color: #777;
 }
-h1,
-.h1,
 h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left:15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+h1,
+.h1
+{
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 h1 small,
 .h1 small,
@@ -1078,11 +1085,11 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 12px;
+  font-size: 0px;
 }
 h2,
 .h2 {
-  font-size: 24px;
+  font-size: 30px;
 }
 h3,
 .h3 {
@@ -3232,7 +3239,7 @@ tbody.collapse.in {
 .navbar-fixed-bottom .dropdown .caret {
   content: "";
   border-top: 0;
-  border-bottom: 4px solid;
+  border-bottom: 0px solid;
 }
 .dropup .dropdown-menu,
 .navbar-fixed-bottom .dropdown .dropdown-menu {
@@ -3771,24 +3778,33 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
-  border: 1px solid transparent;
+  border: 0px solid transparent;
 }
 @media (min-width: 768px) {
   .navbar {
-    border-radius: 4px;
+    border-radius: 0px;
   }
 }
 @media (min-width: 768px) {
+   .navbar .navbar-nav {
+            display: inline-block;
+            float: none;
+        }
+        
+        .navbar .navbar-collapse {
+            text-align: center;
+        }
   .navbar-header {
-    float: left;
+    float: none;
   }
+  
 }
 .navbar-collapse {
   padding-right: 15px;
   padding-left: 15px;
   overflow-x: visible;
   -webkit-overflow-scrolling: touch;
-  border-top: 1px solid transparent;
+  border-top: 0px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
 }
@@ -3907,23 +3923,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border: 1px solid transparent;
   border-radius: 4px;
 }
-
-	.navbar-toggle2 {
-	text-weight:bold;
-	background: #fff;
-  position: relative;
-  float: right;
-  padding: 9px 10px;
-  margin-top: 8px;
-  margin-right: 15px;
-  margin-bottom: 8px;
-  background-color: transparent;
-  background-image: none;
-  border:0px;
-  border-right:2px solid #ddd;
-  border-radius: 4px;
-}
-
 .navbar-toggle:focus {
   outline: 0;
 }
@@ -3938,11 +3937,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 768px) {
   .navbar-toggle {
-    display: none;
-  }
+    display: none;  }
 }
 .navbar-nav {
-  margin: 7.5px -15px;
+  margin: 0;
+  
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -6219,3 +6218,29 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    width:40px;
+	padding: 0;
+    max-height: none;
+	margin:0;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+	padding:0;
+	margin:0;
+	
+  }
+  .sidebar-nav .navbar ul:not {
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+	width:100%;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}

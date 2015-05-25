@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>WBT</title>
    <!-- Styles -->
-    <link rel="stylesheet" href="src/css/wbtStyle.css"/>
+    <link rel="stylesheet" href="src/css/_wbtStyle.css"/>
     <link rel="stylesheet" href="src/css/bootstrap.css"/>
     <link rel="stylesheet" href="src/css/bootstrap-theme.css"/>
    <!-- JS -->
@@ -17,119 +17,113 @@
 	<script src="src/js/modal.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/loacalStorage.js" type="text/javascript" charset="utf-8"></script>
     <script src="src/js/framework.js" type="text/javascript" charset="utf-8"></script>
-   	<!-- JS-Language -->
-	<!-- <script src="src/lang/DE_de.js" type="text/javascript" charset="utf-8" defer></script> --> 
-   	<script src="src/lang/EN_en.js" type="text/javascript" charset="utf-8" defer></script>
    <!-- JS-Module -->
-	<script src="src/js/accordion.js" type="text/javascript" charset="utf-8"></script>
-	<script src="src/js/video.js" type="text/javascript" charset="utf-8"></script>
+   <script src="src/js/accordion.js" type="text/javascript" charset="utf-8"></script>
+   <script src="src/js/video.js" type="text/javascript" charset="utf-8"></script>
     <script src="src/js/audio.js" type="text/javascript" charset="utf-8"></script>
     <script src="src/js/value.js" type="text/javascript" charset="utf-8"></script>
     <script src="src/js/dragDrop.js" type="text/javascript" charset="utf-8"></script>
     <script src="src/js/gallery.js" type="text/javascript" charset="utf-8"></script>
-	<script src="src/js/multiple-choice.js" type="text/javascript" charset="utf-8"></script>
-	<script src="src/js/single-choice.js" type="text/javascript" charset="utf-8"></script>
-</head>
+   <script src="src/js/multiple-choice.js" type="text/javascript" charset="utf-8"></script>
+   </head>
 <body>
 <div class="container">
-    <nav class="mainNavigation"></nav>
-	<div class="col-md-3 col-xs-3">
-		<h1>WBT</h1>
-		<h2>Fit ohne Geräte</h2>
-       <p>Hier kommt das Text.</p>
-    </div>
-    <div class="col-md-9 col-xs-9">
-	<div class="proba">sho iamt</div>
-    <div class="row">
-			<section data-linear="1">
-                  <h1>WBT</h1>
-                <article>	
-                    <h2>Fit ohne Geräte</h2>
-                    <!-- <div class="module accordion" >
-						<p data-title="...">Willkommen Seite<br/><br/><img src="data/images/Slide-1.jpg" alt="übung1"/></p>					
-                    </div> -->
-					<div class="kurs-starten">Kurs starten</div>
-                </article>
-            </section>
-			<section data-linear="2">
-                <h1>Lektionen</h1>
-                <article>
-                    <h2>Lektion 1</h2>
-                    <div class="module gallery">
-                        <div data-src="data/images/Slide-1.jpg">Hier gehen nur Bilder! Texte können in dieser Gallerie nur wie hier oder als Bild eingebunden werden!</div>
-                        <div data-src="data/images/Slide-2.jpg">Videos sind ebenfalls nicht möglich!</div>
-                    </div>
-                </article>
-                <article>
-                    <h2>Lektion 2</h2>
-                     <div class="module accordion" >
-						<p data-title="Header-Title1">Übung 2 Text<br/><br/><img src="data/images/Slide-1.jpg" alt="übung1"/></p>					
-                    </div>
-					<div class="module video"><p data-src="data/video/cat.mp4"></p></div>
-                </article>
-                  <article>
-                    <h2>Lektion 3</h2>
-					<div id="myCarousel" class="carousel slide" data-interval="false" style="width:500px height:300px>
-					  <ol class="carousel-indicators">
-						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<li data-target="#myCarousel" data-slide-to="2"></li>
-					  </ol>
-					  <!-- Carousel items -->
-					  <div class="carousel-inner" >
-						<div class="active item"><img class="img-responsive center-block" src="data/images/Slide-1.jpg" width="500" height="300"></div>
-						<div class="item"><video width="500" height="300" class="img-responsive center-block"><source src="data/video/small.ogv" type="video/ogg" /></video></div>
-						<div class="item"><img class="img-responsive center-block" src="data/images/Slide-2.jpg" width="500" height="300"></div>
-					  </div>
-					  <!-- Carousel nav -->
-					  <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-					  <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-					</div>						
-                </article>
-            </section>
-			<section data-linear="2">
-                <h1>Glossar</h1>
-                <article>
-                    <h2>Lektion 1</h2>
-                    <div class="module accordion" >
-						<p data-title="Header-Title1">Text zu Übung 1.<br/><br/><img src="http://www.planet-wissen.de/natur_technik/weltall/sonne/img/intro_soho_g.jpg" alt="SONNE"/></p>
-						<p data-title="Header-Title2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                    </div>
-                </article>
-            </section>
-			<section data-linear="2">
-                <h1>Quellen</h1>
-                <article>
-                    <h2>Lektion 1</h2>
-                    <div class="module accordion" >
-						<p data-title="Header-Title1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/><br/><img src="http://www.planet-wissen.de/natur_technik/weltall/sonne/img/intro_soho_g.jpg" alt="SONNE"/></p>
-						<p data-title="Header-Title2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                    </div>
-                </article>
-			</section>	
-				<section data-linear="2">
-                <h1>Hilfe</h1>
-                <article>
-                    <h2>Lektion 1</h2>
-                    <div class="module accordion" >
-						<p data-title="Header-Title1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/><br/><img src="http://www.planet-wissen.de/natur_technik/weltall/sonne/img/intro_soho_g.jpg" alt="SONNE"/></p>
-						<p data-title="Header-Title2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                    </div>
-                </article>
-            </section>
-			<section data-linear="2">
-                <h1>Impressum</h1>
-                <article>
-                    <h2>Kontakt</h2>
-                    <div class="module accordion" >
-						<p data-title="Header-Title1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/><br/><img src="http://www.planet-wissen.de/natur_technik/weltall/sonne/img/intro_soho_g.jpg" alt="SONNE"/></p>
-						<p data-title="Header-Title2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                    </div>
-                </article>
-            </section>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	   <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+		<a class="navbar-brand" href="#">Fit Ohne Geräte</a> 
+        <li class="active"><a href="#">About<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Glossary</a></li>
+		<li><a href="#">Download</a></li>
+        </li>
+      </ul>
+	  </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+	  
 
+	</nav>
+
+    <div class="row">
+			<div class="col-md-2 col-xs-2">
+					<div class="sidebar-nav"><nav class="mainNavigation"></nav></div>
+			</div>
+        <div class="col-md-9 col-xs-9">
+
+		<h3>About</h3>
+            <section data-linear="2">
+                <h1>Easy</h1> 
+					<article>
+					   <h2>Rücken</h2>
+						<div class="module video">
+							<p data-src="data/video/cat.mp4"></p>
+						</div>
+					</article>
+					<article>
+					   <h2>Beine</h2>
+						<div class="module audio"><p data-src="data/sound/audio.mp3"></p></div>
+						   
+					</article><article>
+					   <h2>Po</h2>
+						   <div class="module accordion" >
+                    <p data-title="Header-Title1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/><br/><img src="http://www.planet-wissen.de/natur_technik/weltall/sonne/img/intro_soho_g.jpg" alt="SONNE"/></p>
+                    <p data-title="Header-Title2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                        </div>
+					</article>
+            </section>
+			
+			<section data-linear="2">
+                <h1>Medium</h1> 
+					<article>
+					   <h2>Rücken</h2>
+						<div class="module video">
+							<p data-src="data/video/cat.mp4"></p>
+						</div>
+					</article>
+					<article>
+					   <h2>Beine</h2>
+						<div class="module audio"><p data-src="data/sound/audio.mp3"></p></div>
+						   
+					</article><article>
+					   <h2>Po</h2>
+						   <div class="module accordion" >
+                    <p data-title="Header-Title1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/><br/><img src="http://www.planet-wissen.de/natur_technik/weltall/sonne/img/intro_soho_g.jpg" alt="SONNE"/></p>
+                    <p data-title="Header-Title2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                        </div>
+					</article>
+            </section>
+			<section data-linear="2">
+                <h1>Hard</h1> 
+					<article>
+					   <h2>Rücken</h2>
+						<div class="module video">
+							<p data-src="data/video/cat.mp4"></p>
+						</div>
+					</article>
+					<article>
+					   <h2>Beine</h2>
+						<div class="module audio"><p data-src="data/sound/audio.mp3"></p></div>
+						   
+					</article><article>
+					   <h2>Po</h2>
+						   <div class="module accordion" >
+                    <p data-title="Header-Title1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/><br/><img src="http://www.planet-wissen.de/natur_technik/weltall/sonne/img/intro_soho_g.jpg" alt="SONNE"/></p>
+                    <p data-title="Header-Title2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                        </div>
+					</article>
+            </section>
+            <!-- // section end -->
     </div>
 </div>
-
 </body>
 </html>

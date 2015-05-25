@@ -249,10 +249,6 @@ App.SectionManager = {
      */
     articles : {},
 
-    /**
-     * indicates if the showArticle functions runs for the first time. This needs a special behaviour of this function
-     * @type {Boolean}
-     */
     firstRun : true,
 
    
@@ -374,12 +370,12 @@ App.SectionManager = {
                 var id;
                 if(i > 0){
                     id = articleArray[i-1];
-                    row.append("<a href=\"#walk\" data-id=\""+id+"\" class=\"btn btn-default pull-left walkingButton\" role=\"button\">"+App.Lang.PREV_BUTTON+"</a>");
+                    row.append("<a href=\"#walk\" data-id=\""+id+"\" class=\"btn btn-default pull-left walkingButton\" role=\"button\">Zurück</a>");
                 }
 
                 if(i < len){
                     id = (i < len - 1) ? articleArray[i + 1] : this.sections[section].id;
-                    row.append("<a href=\"#"+(i == len - 1 ? "finish" : "walk")+"\" data-id=\""+id+"\" class=\"btn btn-primary pull-right walkingButton\" role=\"button\">"+(i == len - 1 ? App.Lang.FINISH_BUTTON : App.Lang.NEXT_BUTTON)+"</a>");
+                    row.append("<a href=\"#"+(i == len - 1 ? "finish" : "walk")+"\" data-id=\""+id+"\" class=\"btn btn-primary pull-right walkingButton\" role=\"button\">"+(i == len - 1 ? "Abschließen" : "Weiter")+"</a>");
                 }
 
                 this.articles[articleArray[i]].selector.append(row);
@@ -411,34 +407,25 @@ App.SectionManager = {
 
         var arg, canProceed = true;
 
-        // skip calling validation functions of modules in the first function call
         if(!this.firstRun){
             
-            // is the target a previous one?
-            // if true, skip validation of modules
-
             if(this.currentSection === parentSection.id){
-                // is the target a previous one?
-                // if true, skip validation of modules
-                // 
-                if(parentSection.articleList[parentSection.articleList.indexOf(this.currentArticle) - 1] !== articleName){
-                    // validate if we have any validator modules in this article
-                    for(var i = 0, modules = this.articles[this.currentArticle].modules, validatorResult = false; i < modules.length; i++){
-                        var currentModule = App.ModuleManager.registeredModules[modules[i]];
-                        if(currentModule.isValidator && !currentModule.finished){
-                            validatorResult = currentModule.validate(currentModule)
-                            canProceed = canProceed && validatorResult;
+                // validate if we have any validator modules in this article
+                for(var i = 0, modules = this.articles[this.currentArticle].modules, validatorResult = false; i < modules.length; i++){
+                    var currentModule = App.ModuleManager.registeredModules[modules[i]];
+                    if(currentModule.isValidator && !currentModule.finished){
+                        validatorResult = currentModule.validate(currentModule)
+                        canProceed = canProceed && validatorResult;
 
-                            currentModule.finished = validatorResult;
-                        } else {
-                            canProceed = canProceed && true;
-                        }
+                        currentModule.finished = validatorResult;
+                    } else {
+                        canProceed = canProceed && true;
                     }
                 }
             }
 
-            if(!canProceed && this.currentSection === parentSection.id && !this.currentSection.isLinear){
-                App.Helper.showModal(App.Lang.ERROR_VISIT_PREVIOUS_TITLE, "<b>"+App.Lang.ERROR_MSG_WRONG_ANSWER+"</b>", null);
+            if(!canProceed && this.currentSection === parentSection.id){
+                alert("bitte alle sachen richtig machen!");
                 return;
             }
         }
@@ -467,7 +454,7 @@ App.SectionManager = {
                 for(var i = 0, modules = this.articles[allArticles[nextIndex-1]].modules; i < modules.length; i++){
                     var currentModule = App.ModuleManager.registeredModules[modules[i]];
                     if(currentModule.isValidator && !currentModule.finished){
-                        App.Helper.showModal(App.Lang.ERROR_WRONG_ANSWER_TITLE, "<b>"+App.Lang.ERROR_MSG_WRONG_ANSWER+"</b>", null);
+                        alert("erst sachen davor machen!");
                         return;
                     }
                 }
@@ -575,37 +562,7 @@ App.SectionManager = {
     },
 
     finishSection : function(sectionID){
-
-        var canProceed = true;
-
-        for(var i = 0, modules = this.articles[this.currentArticle].modules, validatorResult = false; i < modules.length; i++){
-            var currentModule = App.ModuleManager.registeredModules[modules[i]];
-            if(currentModule.isValidator && !currentModule.finished){
-                validatorResult = currentModule.validate(currentModule)
-                canProceed = canProceed && validatorResult;
-
-                currentModule.finished = validatorResult;
-            } else {
-                canProceed = canProceed && true;
-            }
-        }
-
-        if(canProceed && !App.SectionManager.sections[sectionID].finished){
-            App.SectionManager.articles[App.SectionManager.currentArticle].visited = true;
-
-            var sectionFinished = true;
-            // check if we visited all articles before
-            
-            for(var i = 0, articles = App.SectionManager.sections[sectionID].articleList; i < articles.length; i++){
-                sectionFinished = sectionFinished && App.SectionManager.articles[articles[i]].visited;
-            }
-
-            if(sectionFinished){
-                App.SectionManager.sections[sectionID].finished = true;
-                App.NavigationManager.markSubNavigationAsDone();
-            }
-
-        }
+        App.SectionManager.sections[sectionID].finished = true;
     }
 
 };
@@ -688,25 +645,6 @@ App.Helper = {
                 return Math.round(Math.random());
             }
         );
-    },
-
-    showModal : function(title, content, callback){
-        var myModalID = App.Helper.generateUniqueID(),
-            myModalLabelID = App.Helper.generateUniqueID(),
-            modal = '<div class="modal fade" id="'+myModalID+'" tabindex="-1" role="dialog" aria-labelledby="'+myModalLabelID+'" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h4 class="modal-title" id="'+myModalLabelID+'">'+title+'</h4></div><div class="modal-body">'+content+'</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">'+App.Lang.CLOSE_BUTTON+'</button></div></div></div></div>';
-        
-        $('body').append(modal);
-        $('#'+myModalID).modal('show'); 
-
-        $('#'+myModalID).on('hidden.bs.modal', function (e) {
-        //Modal löschen
-            $(this).remove();
-            
-            //Callback-Funktion ausführen, wenn vorhanden
-            if(typeof callback === "function"){
-                callback();
-            }
-        });
     }
 
 };
@@ -777,14 +715,11 @@ App.NavigationManager = {
         // start with the html content
         var HTMLcontent = "<div class=\"container-fluid\">";
 
-			        HTMLcontent += '<div class="navbar-header"><button type="button" class="navbar-toggle2">WBT - Fit ohne Geräte</button>'
-
-		
-        // add the navbar header   div class="nav-titel"></div>
-        HTMLcontent += '<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#'+navBarID+'"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>'
+        // add the navbar header
+        HTMLcontent += '<div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>'
 
         // first part of the collapsable navbar
-        HTMLcontent += '<div class="collapse navbar-collapse" id="'+navBarID+'"><ul class="nav navbar-nav">';
+        HTMLcontent += '<navbar-collapse collapse sidebar-navbar-collapse"><div class="panel-heading"><b>Übungen</b></div><ul class="nav navbar-nav">';
 
         // walk through every registered section in the section manager, get its articles and adds the dropdown code for every article
         for(section in App.SectionManager.sections){
@@ -970,14 +905,6 @@ App.NavigationManager = {
 
     disableSubLink : function(target){
         this.getSubNavigationElement(target).addClass("disabled");
-    },
-
-    markSubNavigationAsDone : function(){
-        if(this.hasSubNavigation){
-            this.subNavigation.find("h3").removeClass("list-group-item-info")
-                .addClass("list-group-item-success")
-                .append("<span class=\"glyphicon glyphicon-ok pull-right\"></span>");
-        }
     }
 
 
