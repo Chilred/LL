@@ -26,8 +26,10 @@
     <script src="src/js/gallery.js" type="text/javascript" charset="utf-8"></script>
    <script src="src/js/multiple-choice.js" type="text/javascript" charset="utf-8"></script>
    <script src="src/js/extra-menu.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/js/remove-buttons.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/js/custom-article-animation.js" type="text/javascript" charset="utf-8"></script>
    </head>
-<body>
+<body data-animation-type-in="fadeIn" data-animation-speed-in="300" data-animation-type-out="fadeOut" data-animation-speed-out="100">
 <div class="container">
 	
 	
@@ -46,6 +48,38 @@
         <div class="col-md-9 col-xs-9">
 
 		<h3>About</h3>
+			<section data-linear="2" class="no-buttons">
+                <h1>Menüzeug</h1> 
+					<article data-menu-id="#art1">
+					   <h2>About</h2>
+						<div class="col-md-4 col-xs-4">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+						</div>
+						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
+					</article>
+					<article data-menu-id="#art2">
+					   <h2>Glossary</h2>
+						<div class="col-md-4 col-xs-4">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+						</div>
+						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
+					</article>
+					</article>
+					<article data-menu-id="#art3">
+					   <h2>Download</h2>
+						<div class="col-md-4 col-xs-4">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+						</div>
+						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
+					</article>
+					<article data-menu-id="#art4">
+					   <h2>PAPST</h2>
+						<div class="col-md-4 col-xs-4">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+						</div>
+						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
+					</article>
+            </section>
             <section data-linear="2">
                 <h1>Easy</h1> 
 					<article>
@@ -112,38 +146,7 @@
                         </div>
 					</article>
             </section>
-			<section data-linear="2">
-                <h1>Menüzeug</h1> 
-					<article data-menu-id="#art1">
-					   <h2>About</h2>
-						<div class="col-md-4 col-xs-4">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-						</div>
-						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
-					</article>
-					<article data-menu-id="#art2">
-					   <h2>Glossary</h2>
-						<div class="col-md-4 col-xs-4">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-						</div>
-						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
-					</article>
-					</article>
-					<article data-menu-id="#art3">
-					   <h2>Download</h2>
-						<div class="col-md-4 col-xs-4">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-						</div>
-						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
-					</article>
-					<article data-menu-id="#art4">
-					   <h2>PAPST</h2>
-						<div class="col-md-4 col-xs-4">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-						</div>
-						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
-					</article>
-            </section>
+			
             <!-- // section end -->
     </div>
 </div>

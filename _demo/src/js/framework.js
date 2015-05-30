@@ -497,7 +497,7 @@ App.SectionManager = {
         }
         // make the new section and article visible
         parentSection.selector.show();
-        thisArticle.selector.fadeIn(300);
+        thisArticle.selector.show();
 
         // "visit" the article in our structure
         this.articles[this.currentArticle].visited = true;
