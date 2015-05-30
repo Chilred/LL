@@ -28,13 +28,14 @@
    <script src="src/js/extra-menu.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/remove-buttons.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/custom-article-animation.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/js/remove-menu-entries.js" type="text/javascript" charset="utf-8"></script>
    </head>
 <body data-animation-type-in="fadeIn" data-animation-speed-in="300" data-animation-type-out="fadeOut" data-animation-speed-out="100">
 <div class="container">
 	
 	
 	<div class="module extra-menu">
-		<h1>Fit ohne Geräte</h1>
+		<h1 data-src="#art0">Fit ohne Geräte</h1>
 		<p data-src="#art1"></p>
 		<p data-src="#art2"></p>
 		<p data-src="#art3"></p>
@@ -48,8 +49,15 @@
         <div class="col-md-9 col-xs-9">
 
 		<h3>About</h3>
-			<section data-linear="2" class="no-buttons">
-                <h1>Menüzeug</h1> 
+			<section data-linear="2" class="no-buttons no-mainNavigation">
+                <h1>Menüzeug</h1>
+					<article data-menu-id="#art0">
+					   <h2>Start</h2>
+						<div class="col-md-4 col-xs-4">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+						</div>
+						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
+					</article>
 					<article data-menu-id="#art1">
 					   <h2>About</h2>
 						<div class="col-md-4 col-xs-4">
@@ -83,13 +91,20 @@
             <section data-linear="2">
                 <h1>Easy</h1> 
 					<article>
-					   <h2>Rücken</h2>
+					   <h2>Rücken 1</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 						</div>
 						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
 					</article>
-					<article>
+					<article class="no-mainNavigation">
+					   <h2>Rücken 2</h2>
+						<div class="col-md-4 col-xs-4">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+						</div>
+						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
+					</article>
+					<article class="no-menu">
 					   <h2>Beine</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.

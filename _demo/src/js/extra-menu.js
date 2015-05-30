@@ -39,7 +39,7 @@ App.ModuleManager.extend("Extra-Menu",
                 var thisObject = $(this);
 				// find all p (data) tags
 				var content = thisObject.find("p");
-				var heading = thisObject.find("h1").text();
+				var heading = thisObject.find("h1");
 
 				// if there are less than one objects, we cannot generate a menu
 				// throw an exception
@@ -47,11 +47,17 @@ App.ModuleManager.extend("Extra-Menu",
 					throw new Error("The object \""+wrapperClassCopy+"\" contains no content elements!\nSee at the documentation!");
 				}
 				
+				if(heading.length > 0){
+					heading = '<a class="navbar-brand" data-target="' + $("[data-menu-id='" + heading.data('src') + "']").attr("id") + '" href="#' + $("[data-menu-id='" + heading.data('src') + "']").attr("id") + '">' + heading.text() +'</a>';
+				} else {
+					heading = '';
+				}
+				
 				 // generates a unique id for this module
 				objectID = App.Helper.generateUniqueID();
 				
 				// first part of video tag
-				var htmlContent = '<nav id=\"' + objectID + '\" class=\"navbar navbar-default navbar-fixed-top\"><div class=\"container-fluid\"><div class=\"navbar-header\"><button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#extra-nav\"><span class=\"sr-only\">Toggle navigation</span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span></button><div id="extra-nav" class=\"collapse navbar-collapse\"><ul class=\"nav navbar-nav extra-nav\"><a class="navbar-brand" href="#">' + heading +'</a>';
+				var htmlContent = '<nav id=\"' + objectID + '\" class=\"navbar navbar-default navbar-fixed-top\"><div class=\"container-fluid\"><div class=\"navbar-header\"><button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#extra-nav\"><span class=\"sr-only\">Toggle navigation</span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span></button><div id="extra-nav" class=\"collapse navbar-collapse\"><ul class=\"nav navbar-nav extra-nav\">' + heading;
 				
 				// for every p (data) entry generate a panel
                 content.each(function(index){
@@ -65,7 +71,7 @@ App.ModuleManager.extend("Extra-Menu",
                     }
 
 					// getting the ID of the article that shall be linked
-					var path = currentContentObject.attr("data-src"); // p-tag auslesen
+					var path = currentContentObject.data("src"); // p-tag auslesen
 					
 					var menuItemID = $("[data-menu-id='" + path + "']").attr("id");
 
@@ -79,7 +85,7 @@ App.ModuleManager.extend("Extra-Menu",
             });
 			
 			// add EventListener to menu entries to show the article and activate/deactivate the menu entry
-			$(".extra-nav > li > a").click(function(e){
+			$(".extra-nav > li > a, .extra-nav > a").click(function(e){
 				var t = $(this);
 
 				var parentLI = t.parent("li");
