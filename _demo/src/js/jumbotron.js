@@ -71,7 +71,7 @@ App.ModuleManager.extend("Jumbotron", //registriet Modul in framework.js
 				
                 // add jumbotron to article
                 thisObject.remove();
-				heading.hide();
+				heading.remove();
 				parentArticle.append(htmlContent);
             }); 
         }

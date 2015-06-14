@@ -34,15 +34,12 @@
 	<script src="src/js/remove-menu-entries.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/add-article-title-to-buttons.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/mark-menu-entry.js" type="text/javascript" charset="utf-8"></script>
-<<<<<<< .merge_file_a01256
-	<script src="src/js/popcorn.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="src/js/popcorn.js" type="text/javascript" charset="utf-8"></script>-->
 	<script src="src/js/jumbotron.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/add-custom-link.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/remove-element.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/remove-last-buttons.js" type="text/javascript" charset="utf-8"></script>
-=======
-	<!--<script src="src/js/popcorn.js" type="text/javascript" charset="utf-8"></script>-->
->>>>>>> .merge_file_a02376
+
    </head>
 <body data-animation-type-in="fadeIn" data-animation-speed-in="300" data-animation-type-out="fadeOut" data-animation-speed-out="100">
 <div class="container">
@@ -65,18 +62,9 @@
 		<h3>About</h3>
 			<section data-linear="2" class="no-buttons no-mainNavigation">
                 <h1>Menüzeug</h1>
-					<article data-menu-id="#art0" class="hide-subNavigation">
-					   <h2>Start</h2>
-<<<<<<< .merge_file_a01256
-						<div class="module jumbotron">
-						  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et...</p>
-						  <button data-link-src="#art1">Training starten</button>
-=======
-						<div class="col-md-4 col-xs-4">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-						
->>>>>>> .merge_file_a02376
-						</div>
+					<article data-menu-id="#art0">
+					   <h2>Startseite</h2>
+
 					</article>
 					<article data-menu-id="#art1">
 					   <h2>About</h2>
@@ -109,8 +97,16 @@
 					</article>
             </section>
             <section data-linear="2" class="no-last-button">
-                <h1>Easy</h1> 
-					<article data-next-btn="Weiter zum Video" data-menu-id="#ruecken">
+                <h1>Easy</h1>
+					<article class="hide-subNavigation no-buttons">
+					   <h2>Rücken</h2>
+
+						<div class="module jumbotron">
+						  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et...</p>
+						  <button data-link-src="#ruecken">Training starten</button>
+						</div>
+					</article>
+					<article class="no-mainNavigation" data-next-btn="Weiter zum Video" data-menu-id="#ruecken">
 					   <h2>Rücken - Einführung</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -143,7 +139,16 @@
 							</div>
 							</div>
 					</article>
-					<article class="no-menu" data-prev-btn='Zurück zum Video "Rücken"'>
+					
+					<article class="hide-subNavigation no-buttons">
+					   <h2>Beine</h2>
+
+						<div class="module jumbotron">
+						  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et...</p>
+						  <button data-link-src="#beine">Training starten</button>
+						</div>
+					</article>
+					<article class="no-mainNavigation" data-prev-btn='Zurück zum Video "Rücken"' data-menu-id="#beine">
 					   <h2>Beine - Einführung</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -152,7 +157,7 @@
 						BILD
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#ruecken">
+					<article class="no-mainNavigation" data-mark-menu="#beine">
 					   <h2>Beine - Video</h2>
 						<div class="module video"><p data-src="data/video/cat.mp4"></p></div>
 						<div class="module popcorn">
@@ -161,7 +166,7 @@
 							<p data-jump-to="50">Zusammenfassung</p>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#ruecken">
+					<article class="no-mainNavigation" data-mark-menu="#beine">
 					   <h2>Beine - Bewertung</h2>
 							<div class="col-md-12 col-xs-12">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -176,7 +181,16 @@
 							</div>
 							</div>
 					</article>
-					<article>
+					
+					<article class="hide-subNavigation no-buttons">
+					   <h2>Bauch</h2>
+
+						<div class="module jumbotron">
+						  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et...</p>
+						  <button data-link-src="#bauch">Training starten</button>
+						</div>
+					</article>
+					<article class="no-mainNavigation" data-menu-id="#bauch">
 					   <h2>Bauch - Einführung</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -185,7 +199,7 @@
 						BILD
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#ruecken">
+					<article class="no-mainNavigation" data-mark-menu="#bauch">
 					   <h2>Bauch - Video</h2>
 						<div class="module video"><p data-src="data/video/cat.mp4"></p></div>
 						<div class="module popcorn">
@@ -194,7 +208,7 @@
 							<p data-jump-to="50">Zusammenfassung</p>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#ruecken">
+					<article class="no-mainNavigation" data-mark-menu="#bauch">
 					   <h2>Bauch - Bewertung</h2>
 							<div class="col-md-12 col-xs-12">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
