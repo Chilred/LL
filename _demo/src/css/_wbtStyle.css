@@ -8,6 +8,11 @@ ul, li	{ list-style-type:none; padding:0px; margin:0px; }
 /*Modulbereiche*/
 .wrapper { min-width:320px; padding:8px;  }
 
+/* Footer */
+.footer {
+	padding-top: 20px!important;
+	clear: both;
+}
 
 /*MODULE*/
 
@@ -24,3 +29,12 @@ ul, li	{ list-style-type:none; padding:0px; margin:0px; }
 .logo {width:auto; margin: 5px 0 0 0;}
 .logo  img{ width:100%;}
 .mainNavigation {margin: 63px 0 0 0;}
+
+/* Jumbotron */
+.jumbotron {
+	margin-top: 30px;
+}
+
+.jumbotron h2 {
+	font-size: 35px;
+}

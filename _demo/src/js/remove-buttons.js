@@ -19,11 +19,6 @@
  * EVENT-NAME
  * 'remove-button'
  */
- 
-// register the removing function
-App.Event.register("remove-button", function(article){
-	$("[id='" + article + "']").find('.footer > .walkingButton').parent().remove();
-});
 
 // remove all buttons that are supposed to be removed once DOM is loaded
 $(document).ready(function(){ 
@@ -31,13 +26,13 @@ $(document).ready(function(){
 	
 	noButtonArticles.each(function(index){
 		var removeID = $(this).attr('id');
-		App.Event.triggerArg("remove-button", removeID); 
+		App.Event.triggerArg("remove-element", $("[id='" + removeID + "']").find('.footer > .walkingButton').parent()); 
 	});
 	
 	noButtonArticles = $("article.no-buttons");
 	
 	noButtonArticles.each(function(index){
 		var removeID = $(this).attr('id');
-		App.Event.triggerArg("remove-button", removeID); 
+		App.Event.triggerArg("remove-element", $("[id='" + removeID + "']").find('.footer > .walkingButton').parent()); 
 	});
 });

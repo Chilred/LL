@@ -14,13 +14,15 @@
  *
  */
  
+ var defaultValues, animationSpeedIn, animationTypeIn, animationSpeedOut, animationTypeOut;
+ 
 // Expands the App.SectionManager.showArticle() function from framework.js
 // Adds custom animation for displaying an article
 App.SectionManager.showArticle = (function() {
 	var cached_function = App.SectionManager.showArticle;
 
 	return function() {
-		var defaultValues = {'animation-type-in': 'show', 'animation-speed-in': '0', 'animation-type-out': 'hide', 'animation-speed-out': '0' };
+		defaultValues = {'animation-type-in': 'show', 'animation-speed-in': '0', 'animation-type-out': 'hide', 'animation-speed-out': '0' };
 		
 		// read data attributes to choose a animation type and speef
 		var getAnimationData = function(art, datatype) {
@@ -42,19 +44,27 @@ App.SectionManager.showArticle = (function() {
 			// get article that is supposed to be shown
 			var article = App.SectionManager.articles[arg[0]];
 			
-			// hide it immediately so custom animation can take effect
-			article.selector.hide();
+			animationSpeedIn = Number.parseInt(getAnimationData(article, 'animation-speed-in'));
+			animationTypeIn = getAnimationData(article, 'animation-type-in');
+			var elem;
+			if(article.selector.hasClass('hide-subNavigation')) {
+				$(".sidebar-nav").parent().hide();
+				$(".sidebar-nav").parent().next().removeAttr('class');
+				$(".sidebar-nav").parent().next().addClass('col-md-12 col-xs-12');
+				elem = article.selector.parent().parent().parent();
+			} else {
+				elem = article.selector;
+			}
 			
-			var animationSpeed = Number.parseInt(getAnimationData(article, 'animation-speed-in'));
-			var animationType = getAnimationData(article, 'animation-type-in');
+			elem.hide();
 			
 			// add custom animation
-			switch(animationType) {
+			switch(animationTypeIn) {
 				case "fadeIn":
-					article.selector.fadeIn(animationSpeed);
+					elem.fadeIn(animationSpeedIn);
 					break;
 				case "show":
-					article.selector.show(animationSpeed);
+					elem.show(animationSpeedIn);
 					break;
 			}
 		}
@@ -62,29 +72,52 @@ App.SectionManager.showArticle = (function() {
 		if(App.SectionManager.firstRun) {
 			// call original function on first run
 			cached_function.apply(this, arguments);
+			if(App.SectionManager.articles[arguments[0]].selector.hasClass('hide-subNavigation')) {
+				$(".sidebar-nav").parent().hide();
+				$(".sidebar-nav").parent().next().removeAttr('class');
+				$(".sidebar-nav").parent().next().addClass('col-md-12 col-xs-12');
+			}
 		} else {
 			// get current article that is supposed to be faded out
 			var currentArticle = App.SectionManager.articles[App.SectionManager.currentArticle];
 			
-			var animationSpeed = Number.parseInt(getAnimationData(currentArticle, 'animation-speed-out'));
-			var animationType = getAnimationData(currentArticle, 'animation-type-out');
+			animationSpeedOut = Number.parseInt(getAnimationData(currentArticle, 'animation-speed-out'));
+			animationTypeOut = getAnimationData(currentArticle, 'animation-type-out');
 			
 			// save "this" object and arguments array for anonymous function in the fading out process
 			var _t = this;
 			var arg = arguments;
+			var elem;
+			if(App.SectionManager.articles[arg[0]].selector.hasClass('hide-subNavigation')) {
+				elem = currentArticle.selector.parent().parent().parent();
+			} else {
+				elem = currentArticle.selector;
+			}
+			
+			
 			
 			// add custom animation
-			switch(animationType) {
+			switch(animationTypeOut) {
 				case "fadeOut":
 					// when fading animation is done, execute original showArticle() function, afterwards fade in the new article via custom animation
-					currentArticle.selector.fadeOut(animationSpeed, function() {
+					elem.fadeOut(animationSpeedOut, function() {
 						cached_function.apply(_t, arg);
+						if($(".sidebar-nav").parent().css('display') == 'none') {
+							$(".sidebar-nav").parent().next().removeAttr('class');
+							$(".sidebar-nav").parent().next().addClass('col-md-10 col-xs-10');
+							$(".sidebar-nav").parent().show();
+						}
 						fadeInArticle();
 					  });
 					break;
 				case "hide":
-					currentArticle.selector.hide(animationSpeed, function() {
+					elem.hide(animationSpeedOut, function() {
 						cached_function.apply(_t, arg);
+						if($(".sidebar-nav").parent().css('display') == 'none') {
+							$(".sidebar-nav").parent().next().removeAttr('class');
+							$(".sidebar-nav").parent().next().addClass('col-md-10 col-xs-10');
+							$(".sidebar-nav").parent().show();
+						}
 						fadeInArticle();
 					  });
 					break;
