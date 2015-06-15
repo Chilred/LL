@@ -716,10 +716,10 @@ App.NavigationManager = {
         var HTMLcontent = "<div class=\"container-fluid\">";
 
         // add the navbar header
-        HTMLcontent += '<div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>'
+        HTMLcontent += '<div class="navbar-sidebar"></div>'
 
         // first part of the collapsable navbar
-        HTMLcontent += '<navbar-collapse collapse sidebar-navbar-collapse"><div class="panel-heading"><b>Übungen</b></div><ul class="nav navbar-nav">';
+        HTMLcontent += '<div class="panel-heading"><b>Übungen</b></div><ul class="nav tabs">';
 
         // walk through every registered section in the section manager, get its articles and adds the dropdown code for every article
         for(section in App.SectionManager.sections){
