@@ -97,17 +97,18 @@
 					</article>
             </section>
 <!-- Ab hier Easy Bereich -->
-            <section data-linear="2" class="no-last-button">
+            <section class="no-last-button">
                 <h1>Easy</h1>
 					<article class="hide-subNavigation no-buttons">
-					   <h2>Brust</h2>
+					   <h2>Easy</h2>
 
-						<div class="module jumbotron">
+						<div class="module jumbotron" data-background="jumbotron_bauch.jpg">
 						  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et...</p>
 						  <button data-link-src="#brust">Training starten</button>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-next-btn="Weiter zum Video" data-menu-id="#brust">
+					
+					<article data-next-btn="Weiter zum Video" data-menu-id="#brust">
 					   <h2>Brust - Einführung</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -141,15 +142,7 @@
 							</div>
 					</article>
 	<!-- Brust Ende -->				
-					<article class="hide-subNavigation no-buttons">
-					   <h2>Bauch</h2>
-
-						<div class="module jumbotron">
-						  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et...</p>
-						  <button data-link-src="#bauch">Training starten</button>
-						</div>
-					</article>
-					<article class="no-mainNavigation" data-prev-btn='Zurück zum Video "Brust"' data-menu-id="#bauch">
+					<article data-prev-btn='Zurück zum Video "Brust"' data-menu-id="#bauch">
 					   <h2>Bauch - Einführung</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -181,14 +174,7 @@
 							</div>
 					</article>
 		<!-- Bauch Ende -->			
-					<article class="hide-subNavigation no-buttons">
-					   <h2>Rücken</h2>
-						<div class="module jumbotron">
-						  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et...</p>
-						  <button data-link-src="#ruecken">Training starten</button>
-						</div>
-					</article>
-					<article class="no-mainNavigation" data-menu-id="#ruecken">
+					<article data-menu-id="#ruecken">
 					   <h2>Rücken - Einführung</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -222,9 +208,18 @@
 					
             </section>
 <!-- Ab hier Medium Bereich -->			
-			<section data-linear="2"  class="no-last-button">
+			<section class="no-last-button">
                 <h1>Medium</h1> 
-					<article>
+					<article class="hide-subNavigation no-buttons">
+					   <h2>Medium</h2>
+
+						<div class="module jumbotron" data-background="jumbotron_beine_mittel.jpg">
+						  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et...</p>
+						  <button data-link-src="#brustMedium">Training starten</button>
+						</div>
+					</article>
+				
+					<article data-menu-id="#brustMedium">
 					   <h2>Brust - Einführung</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -233,7 +228,7 @@
 						BILD
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#brust">
+					<article class="no-mainNavigation" data-mark-menu="#brustMedium">
 					   <h2>Brust - Video</h2>
 						<div class="module video"><p data-src="data/video/cat.mp4"></p></div>
 						<div class="module popcorn">
@@ -242,7 +237,7 @@
 							<p data-jump-to="50">Zusammenfassung</p>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#brust">
+					<article class="no-mainNavigation" data-mark-menu="#brustMedium">
 					   <h2>Brust - Bewertung</h2>
 							<div class="col-md-12 col-xs-12">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -258,7 +253,7 @@
 							</div>
 					</article>
 		<!-- Brust Ende -->
-					<article class="no-menu" data-prev-btn='Zurück zum Video "Brust"'>
+					<article data-prev-btn='Zurück zum Video "Brust"' data-menu-id="#bauchMedium">
 					<h2>Bauch - Einführung</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -267,14 +262,14 @@
 						BILD
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#bauch">
+					<article class="no-mainNavigation" data-mark-menu="#bauchMedium">
 					   <h2>Bauch - Video</h2>
 						<div class="module accordion" >
 						<p data-title="Schritt 1"><img src="data\images\lq\bauch-medium-01.jpg" width="100%"/></p>
 						<p data-title="Schritt 2"><img src="data\images\lq\bauch-medium-02.jpg" width="100%"/></p>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#bauch">
+					<article class="no-mainNavigation" data-mark-menu="#bauchMedium">
 					   <h2>Bauch - Bewertung</h2>
 							<div class="col-md-12 col-xs-12">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -290,7 +285,7 @@
 							</div>
 					</article>
 		<!-- Bauch Ende -->
-					<article>
+					<article data-menu-id="#rueckenMedium">
 					   <h2>Rücken - Einführung</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -299,14 +294,14 @@
 						BILD
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#ruecken">
+					<article class="no-mainNavigation" data-mark-menu="#rueckenMedium">
 					   <h2>Rücken - Video</h2>
 						<div class="module accordion" >
 						<p data-title="Schritt 1"><img src="data\images\lq\ruecken-medium-01.jpg" width="100%"/></p>
 						<p data-title="Schritt 2"><img src="data\images\lq\ruecken-medium-02.jpg" width="100%"/></p>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#ruecken">
+					<article class="no-mainNavigation" data-mark-menu="#rueckenMedium">
 					   <h2>Rücken - Bewertung</h2>
 							<div class="col-md-12 col-xs-12">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -323,9 +318,18 @@
 					</article>		
             </section>
 <!-- Ab hier Hard Bereich -->
-			<section data-linear="2">
+			<section class="no-last-button">
                 <h1>Hard</h1> 
-					<article>
+					<article class="hide-subNavigation no-buttons">
+					   <h2>Hard</h2>
+
+						<div class="module jumbotron" data-background="jumbotron_beine_schwer.jpg">
+						  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et...</p>
+						  <button data-link-src="#brustHard">Training starten</button>
+						</div>
+					</article>
+				
+					<article data-menu-id="#brustHard">
 					   <h2>Brust - Einführung</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -334,14 +338,14 @@
 						BILD
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#brust">
+					<article class="no-mainNavigation" data-mark-menu="#brustHard">
 					   <h2>Brust - Video</h2>
 						<div class="module accordion" >
 						<p data-title="Schritt 1"><img src="data\images\lq\brust-schwer-01.jpg" width="100%"/></p>
 						<p data-title="Schritt 2"><img src="data\images\lq\brust-schwer-02.jpg" width="100%"/></p>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#brust">
+					<article class="no-mainNavigation" data-mark-menu="#brustHard">
 					   <h2>Brust - Bewertung</h2>
 							<div class="col-md-12 col-xs-12">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -357,7 +361,7 @@
 							</div>
 					</article>
 		<!-- Brust Ende -->
-					<article class="no-menu" data-prev-btn='Zurück zum Video "Brust"'>
+					<article class="no-menu" data-prev-btn='Zurück zum Video "Brust"' data-menu-id="#bauchHard">
 					<h2>Bauch - Einführung</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -366,14 +370,14 @@
 						BILD
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#bauch">
+					<article class="no-mainNavigation" data-mark-menu="#bauchHard">
 					   <h2>Bauch - Video</h2>
 						<div class="module accordion" >
 						<p data-title="Schritt 1"><img src="data\images\lq\bauch-hart-01.jpg" width="100%"/></p>
 						<p data-title="Schritt 2"><img src="data\images\lq\bauch-hart-02.jpg" width="100%"/></p>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#bauch">
+					<article class="no-mainNavigation" data-mark-menu="#bauchHard">
 					   <h2>Bauch - Bewertung</h2>
 							<div class="col-md-12 col-xs-12">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -389,7 +393,7 @@
 							</div>
 					</article>
 		<!-- Bauch Ende -->
-					<article>
+					<article data-menu-id="#rueckenHard">
 					   <h2>Rücken - Einführung</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -398,14 +402,14 @@
 						BILD
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#ruecken">
+					<article class="no-mainNavigation" data-mark-menu="#rueckenHard">
 					   <h2>Rücken - Video</h2>
 						<div class="module accordion" >
 						<p data-title="Schritt 1"><img src="data\images\lq\ruecken-schwer-01.jpg" width="100%"/></p>
 						<p data-title="Schritt 2"><img src="data\images\lq\ruecken-schwer-02.jpg" width="100%"/></p>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#ruecken">
+					<article class="no-mainNavigation" data-mark-menu="#rueckenHard">
 					   <h2>Rücken - Bewertung</h2>
 							<div class="col-md-12 col-xs-12">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.

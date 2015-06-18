@@ -57,7 +57,7 @@ App.ModuleManager.extend("Extra-Menu",
 				objectID = App.Helper.generateUniqueID();
 				
 				// first part of video tag
-				var htmlContent = '<nav id=\"' + objectID + '\" class=\"navbar navbar-default navbar-fixed-top\"><div class=\"container-fluid\"><div class=\"navbar-header\"><button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#extra-nav\"><span class=\"sr-only\">Toggle navigation</span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span></button><div id="extra-nav" class=\"collapse navbar-collapse\"><ul class=\"nav navbar-nav extra-nav\">' + heading;
+				var htmlContent = '<nav id=\"' + objectID + '\" class=\"navbar navbar-default navbar-fixed-top\"><div class=\"container-fluid\"><div class=\"navbar-header\"><button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#extra-nav' + index + '\"><span class=\"sr-only\">Toggle navigation</span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span></button><div id="extra-nav' + index + '" class=\"collapse navbar-collapse\"><ul class=\"nav navbar-nav extra-nav\">' + heading;
 				
 				// for every p (data) entry generate a panel
                 content.each(function(index){

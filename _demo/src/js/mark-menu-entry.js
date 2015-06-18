@@ -19,7 +19,9 @@ App.NavigationManager.activeLink = (function() {
 	return function() {
 		var menuItemToBeActivated = $("article[data-menu-id='" + App.SectionManager.articles[arguments[0]].selector.data('mark-menu') + "']").attr('id');
 		if(menuItemToBeActivated) {
-			$("a[data-target='" + menuItemToBeActivated + "']").closest('li').addClass('active');
+			alert("jup");
+			$(".mainNavigation a[data-target='" + menuItemToBeActivated + "']").closest('li').addClass('active');
+			$(".subNavigation a[data-target='" + menuItemToBeActivated + "']").addClass('active');
 		} else {
 			cached_function.apply(this, arguments);
 		}
@@ -32,7 +34,8 @@ App.NavigationManager.inactiveLink = (function() {
 	return function() {
 		var menuItemToBeDeactivated = $("article[data-menu-id='" + App.SectionManager.articles[arguments[0]].selector.data('mark-menu') + "']").attr('id');
 		if(menuItemToBeDeactivated) {
-			$("a[data-target='" + menuItemToBeDeactivated + "']").closest('li').removeClass('active');
+			$(".mainNavigation a[data-target='" + menuItemToBeDeactivated + "']").closest('li').removeClass('active');
+			$(".subNavigation a[data-target='" + menuItemToBeDeactivated + "']").removeClass('active');
 		} else {
 			cached_function.apply(this, arguments);
 		}

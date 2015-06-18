@@ -49,6 +49,7 @@ App.ModuleManager.extend("Jumbotron", //registriet Modul in framework.js
                 var heading = parentArticle.find("h2");
 				var content = thisObject.find("p"); //Kommt vom Ersteller
 				var button = thisObject.find("button"); //Kommt vom Ersteller
+				var background = thisObject.data('background');
 
                 // if there are less than one objects, we cannot generate a valid collapsable module
                 // throw an exception
@@ -59,7 +60,7 @@ App.ModuleManager.extend("Jumbotron", //registriet Modul in framework.js
                // generates a unique id for this module
                 objectID = App.Helper.generateUniqueID();
 				
-                var htmlContent = '<div class="jumbotron" id="' + objectID + '">';
+                var htmlContent = '<div style="background-image: url(\'src/images/' + background + '\');" class="jumbotron" id="' + objectID + '">';
 				
 				htmlContent += '<h2>' + heading.text() + '</h2>';
 				

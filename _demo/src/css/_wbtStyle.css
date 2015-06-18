@@ -33,8 +33,11 @@ ul, li	{ list-style-type:none; padding:0px; margin:0px; }
 /* Jumbotron */
 .jumbotron {
 	margin-top: 30px;
+	background-size: 100%;
+	background-position: center center;
 }
 
 .jumbotron h2 {
-	font-size: 35px;
+	font-size: 42px;
 }
+

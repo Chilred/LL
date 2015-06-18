@@ -33,12 +33,51 @@ App.Event.register("remove-subNavigation-entries", function(article){
 	$(".subNavigation a[data-target='" + article + "']").hide();
 });
 
-// remove the menu entries once DOM is loaded
+App.NavigationManager.buildMainNavigation = (function() {
+	var cached_function = App.NavigationManager.buildMainNavigation;
+
+	return function() {
+		cached_function.apply(this, arguments);
+		
+		var noMenuArticles = $("section.no-mainNavigation").find('article');
+		if(noMenuArticles.length > 0) {
+			var removeID = noMenuArticles.first().attr('id');
+			$(".mainNavigation a[data-target='" + removeID + "']").closest('ul').closest('li').hide();
+		}
+		
+		noMenuArticles = $("article.no-mainNavigation");
+		noMenuArticles.each(function(index){
+			var removeID = $(this).attr('id');
+			App.Event.triggerArg("remove-mainNavigation-entries", removeID); 
+		});
+	};
+}());
+
+App.NavigationManager.buildSubNavigation = (function() {
+	var cached_function = App.NavigationManager.buildSubNavigation;
+
+	return function() {
+		cached_function.apply(this, arguments);
+		
+		var noMenuArticles = $("section.no-subNavigation").find('article');
+		if(noMenuArticles.length > 0) {
+			var removeID = noMenuArticles.first().attr('id');
+			$(".subNavigation a[data-target='" + article + "']").closest('nav').find('*').hide();
+		}
+		
+		noMenuArticles = $("article.no-subNavigation");
+		noMenuArticles.each(function(index){
+			var removeID = $(this).attr('id');
+			App.Event.triggerArg("remove-subNavigation-entries", removeID); 
+		});
+	};
+}());
+
 $(document).ready(function(){ 
 	var noMenuArticles = $("section.no-mainNavigation").find('article');
 	if(noMenuArticles.length > 0) {
 		var removeID = noMenuArticles.first().attr('id');
-		$(".mainNavigation a[data-target='" + article + "']").closest('ul').closest('li').hide();
+		$(".mainNavigation a[data-target='" + removeID + "']").closest('ul').closest('li').hide();
 	}
 	
 	noMenuArticles = $("article.no-mainNavigation");
@@ -47,10 +86,10 @@ $(document).ready(function(){
 		App.Event.triggerArg("remove-mainNavigation-entries", removeID); 
 	});
 	
-	noMenuArticles = $("section.no-subNavigation").find('article');
+	var noMenuArticles = $("section.no-subNavigation").find('article');
 	if(noMenuArticles.length > 0) {
 		var removeID = noMenuArticles.first().attr('id');
-		$(".subNavigation a[data-target='" + article + "']").closest('nav').hide();
+		$(".subNavigation a[data-target='" + article + "']").closest('nav').find('*').hide();
 	}
 	
 	noMenuArticles = $("article.no-subNavigation");
