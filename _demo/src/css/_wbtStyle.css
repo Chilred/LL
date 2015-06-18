@@ -2,6 +2,10 @@
 /* CSS Document */
 ul, li	{ list-style-type:none; padding:0px; margin:0px; }
 
+ul.listing, .listing li {
+	list-style-type: disc!important;
+}
+
 /*Cursor:Pointer*/
 .draggable, .snapTarget	{ cursor:pointer;  }
 
