@@ -19,7 +19,6 @@ App.NavigationManager.activeLink = (function() {
 	return function() {
 		var menuItemToBeActivated = $("article[data-menu-id='" + App.SectionManager.articles[arguments[0]].selector.data('mark-menu') + "']").attr('id');
 		if(menuItemToBeActivated) {
-			alert("jup");
 			$(".mainNavigation a[data-target='" + menuItemToBeActivated + "']").closest('li').addClass('active');
 			$(".subNavigation a[data-target='" + menuItemToBeActivated + "']").addClass('active');
 		} else {
