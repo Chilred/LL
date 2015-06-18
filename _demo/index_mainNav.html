@@ -39,6 +39,30 @@
 	<script src="src/js/add-custom-link.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/remove-element.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/remove-last-buttons.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="src/js/Chart.js"></script>
+	<script type="text/javascript" src="src/js/ranking.js"></script>
+	
+	<script>
+		var xmlHttpObject = ranking.connection(),
+		selectedGroup;
+		
+		function handleContent(){
+			var doughnutData=ranking.getRanking(selectedGroup),
+			element = "chart-area_"+ selectedGroup;
+			canvascontent ='<canvas id="canvas_'+element+'" width="10" height="10"/>',
+			document.getElementById(element).innerHTML =canvascontent;
+			ctx = document.getElementById("canvas_"+element).getContext("2d"),
+			//ctx.clearRect(0, 0, canvas.width, canvas.height);
+			chart = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
+		}
+		
+		function saveContent(group,star){
+			selectedGroup =group;
+			var file = "src/ranking.php";
+			ranking.saveContent(file,group,star);
+		}
+	</script>
 
    </head>
 <body data-animation-type-in="fadeIn" data-animation-speed-in="300" data-animation-type-out="fadeOut" data-animation-speed-out="100">
@@ -130,14 +154,18 @@
 					   <h2>Brust - Bewertung</h2>
 							<div class="col-md-12 col-xs-12">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+							
 							<div class="acidjs-rating-stars">
-							<form>
-							<input type="radio" name="group-2" id="group-2-0" value="5" /><label for="group-2-0"></label><!--
-							--><input type="radio" name="group-2" id="group-2-1" value="4" /><label for="group-2-1"></label><!--
-							--><input type="radio" checked="checked" name="group-2" id="group-2-2" value="3" /><label for="group-2-2"></label><!--
-							--><input type="radio" name="group-2" id="group-2-3" value="2" /><label for="group-2-3"></label><!--
-							--><input type="radio" name="group-2" id="group-2-4"  value="1" /><label for="group-2-4"></label>
-							</form>
+								<form>
+									<input type="radio" name="chest_easy" id="group-1-0" value="5" onClick="saveContent(this.name,5)" /><label for="group-1-0"></label>
+									<input type="radio" name="chest_easy" id="group-1-1" value="4" onClick="saveContent(this.name,4)" /><label for="group-1-1"></label>
+									<input type="radio" checked="checked" name="chest_easy" id="group-1-2" value="3" onClick="saveContent(this.name,3)" /><label for="group-1-2"></label>
+									<input type="radio" name="chest_easy" id="group-1-3" value="2" onClick="saveContent(this.name,2)"/><label for="group-1-3"></label>
+									<input type="radio" name="chest_easy" id="group-1-4"  value="1" onClick="saveContent(this.name,1)"/><label for="group-1-4"></label>
+								</form>
+								<div id="chart-area_chest_easy">
+									<!--<canvas id="chart-area" width="100" height="100"/>-->
+								</div>
 							</div>
 							</div>
 					</article>
@@ -162,15 +190,20 @@
 					   <h2>Bauch - Bewertung</h2>
 							<div class="col-md-12 col-xs-12">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+							
 							<div class="acidjs-rating-stars">
-							<form>
-							<input type="radio" name="group-2" id="group-2-0" value="5" /><label for="group-2-0"></label><!--
-							--><input type="radio" name="group-2" id="group-2-1" value="4" /><label for="group-2-1"></label><!--
-							--><input type="radio" checked="checked" name="group-2" id="group-2-2" value="3" /><label for="group-2-2"></label><!--
-							--><input type="radio" name="group-2" id="group-2-3" value="2" /><label for="group-2-3"></label><!--
-							--><input type="radio" name="group-2" id="group-2-4"  value="1" /><label for="group-2-4"></label>
-							</form>
+								<form>
+									<input type="radio" name="belly_easy" id="group-2-0" value="5" onClick="saveContent(this.name,5)" /><label for="group-2-0"></label>
+									<input type="radio" name="belly_easy" id="group-2-1" value="4" onClick="saveContent(this.name,4)" /><label for="group-2-1"></label>
+									<input type="radio" checked="checked" name="belly_easy" id="group-2-2" value="3" onClick="saveContent(this.name,3)" /><label for="group-2-2"></label>
+									<input type="radio" name="belly_easy" id="group-2-3" value="2" onClick="saveContent(this.name,2)"/><label for="group-2-3"></label>
+									<input type="radio" name="belly_easy" id="group-2-4"  value="1" onClick="saveContent(this.name,1)"/><label for="group-2-4"></label>
+								</form>
+								<div id="chart-area_belly_easy">
+									<!--<canvas id="chart-area" width="100" height="100"/>-->
+								</div>
 							</div>
+							
 							</div>
 					</article>
 		<!-- Bauch Ende -->			
@@ -195,14 +228,18 @@
 							<div class="col-md-12 col-xs-12">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 							<div class="acidjs-rating-stars">
-							<form>
-							<input type="radio" name="group-2" id="group-2-0" value="5" /><label for="group-2-0"></label><!--
-							--><input type="radio" name="group-2" id="group-2-1" value="4" /><label for="group-2-1"></label><!--
-							--><input type="radio" checked="checked" name="group-2" id="group-2-2" value="3" /><label for="group-2-2"></label><!--
-							--><input type="radio" name="group-2" id="group-2-3" value="2" /><label for="group-2-3"></label><!--
-							--><input type="radio" name="group-2" id="group-2-4"  value="1" /><label for="group-2-4"></label>
-							</form>
+								<form>
+									<input type="radio" name="rear_easy" id="group-3-0" value="5" onClick="saveContent(this.name,5)" /><label for="group-3-0"></label>
+									<input type="radio" name="rear_easy" id="group-3-1" value="4" onClick="saveContent(this.name,4)" /><label for="group-3-1"></label>
+									<input type="radio" checked="checked" name="rear_easy" id="group-3-2" value="3" onClick="saveContent(this.name,3)" /><label for="group-3-2"></label>
+									<input type="radio" name="rear_easy" id="group-3-3" value="2" onClick="saveContent(this.name,2)"/><label for="group-3-3"></label>
+									<input type="radio" name="rear_easy" id="group-3-4"  value="1" onClick="saveContent(this.name,1)"/><label for="group-3-4"></label>
+								</form>
+								<div id="chart-area_rear_easy">
+									<!--<canvas id="chart-area" width="100" height="100"/>-->
+								</div>
 							</div>
+							
 							</div>
 					</article>
 					
