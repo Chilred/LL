@@ -12,8 +12,6 @@ ul.listing, .listing li {
 	float: none!important;
 }
 
-
-
 .activeDropdown {
 	position: relative!important;
 	display: block!important;
@@ -43,14 +41,18 @@ ul.listing, .listing li {
 }
 
 .mainNavigation li.dropdown:nth-child(2)  a {
-	border-left: 4px solid #5cb85c!important;
+	border-left: 4px solid #0096ff!important;
 }
 
 .mainNavigation li.dropdown:nth-child(3)  a {
-	border-left: 4px solid #f0ad4e!important;
+	border-left: 4px solid #5cb85c!important;
 }
 
 .mainNavigation li.dropdown:nth-child(4)  a {
+	border-left: 4px solid #f0ad4e!important;
+}
+
+.mainNavigation li.dropdown:nth-child(5)  a {
 	border-left: 4px solid #d9534f!important;
 }
 
@@ -63,13 +65,6 @@ ul.listing, .listing li {
 	background: #f5f5f5;
 	color: #000;
 } 
-
-
-
-
-.glyphicon {
-	margin-right: 8px;
-}
 
 .green-icon {
 	color: #00bb46;
