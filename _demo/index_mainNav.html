@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="src/css/bootstrap.css"/>
     <link rel="stylesheet" href="src/css/bootstrap-theme.css"/>
 	<link rel="stylesheet" href="src/css/stars.css"/>
+	<link rel="stylesheet" href="src/plugins/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 
    <!-- JS -->
     <script src="src/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -39,9 +40,12 @@
 	<script src="src/js/add-custom-link.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/remove-element.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/remove-last-buttons.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/js/link-main-navigation.js" type="text/javascript" charset="utf-8"></script>
 	
 	<script src="src/js/Chart.js"></script>
 	<script type="text/javascript" src="src/js/ranking.js"></script>
+	
+	<script type="text/javascript" src="src/plugins/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 	
 	<script>
 		var xmlHttpObject = ranking.connection(),
@@ -62,6 +66,16 @@
 			var file = "src/ranking.php";
 			ranking.saveContent(file,group,star);
 		}
+		
+		$(document).ready(function() {
+			$(".fancybox").fancybox({
+				helpers : {
+					title: {
+						type: 'over'
+					}
+				}
+			});
+		});
 	</script>
 
    </head>
@@ -94,6 +108,11 @@
 					   <h2>About</h2>
 						<div class="col-md-4 col-xs-4">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+						</div>
+						<div class="module popcorn">
+							<p data-jump-to="0">Einleitung</p>
+							<p data-jump-to="10">Ausführung der Übung</p>
+							<p data-jump-to="50">Zusammenfassung</p>
 						</div>
 						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
 					</article>
@@ -156,18 +175,19 @@
 						Je enger, desto mehr werden die Arme beansprucht!
 						</div>
 						<div class="col-md-4 col-xs-4">
-							<p data-title="Schritt 1"><img src="data\images\lq\bauch-easy-01.JPG" width="100%"/></p>
-							<p data-title="Schritt 2"><img src="data\images\lq\bauch-easy-02.JPG" width="100%"/></p>
+							<a class="fancybox thumbnail" title="Schritt 1" rel="group_bauch_easy" href="data/images/lq/bauch-easy-01.JPG"><img src="data/images/lq/bauch-easy-01.JPG" width="100%"/></a>
+							<a class="fancybox thumbnail" title="Schritt 2" rel="group_bauch_easy" href="data/images/lq/bauch-easy-02.JPG"><img src="data/images/lq/bauch-easy-02.JPG" width="100%"/></a>
 						</div>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#brust">
 					   <h2>Brust - Video</h2>
-						<div class="module video"><p data-src="data/video/brust_easy.mp4"></p></div>
-						<!--<div class="module popcorn">
+					   <div class="module popcorn">
 							<p data-jump-to="0">Einleitung</p>
 							<p data-jump-to="10">Ausführung der Übung</p>
 							<p data-jump-to="50">Zusammenfassung</p>
-						</div>-->
+						</div>
+						<div class="module video"><p data-src="data/video/brust_easy.mp4"></p></div>
+						
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#brust">
 					   <h2>Brust - Bewertung</h2>
@@ -231,7 +251,7 @@
 								</div>
 							</div>
 							
-							</div>
+							
 					</article>
 		<!-- Bauch Ende -->			
 					<article data-menu-id="#ruecken">
@@ -263,7 +283,7 @@
 						<p data-title="Schritt 1"><img src="data/images/lq/ruecken-easy-01.jpg" width="50%"/></p>
 						<p data-title="Schritt 2"><img src="data/images/lq/ruecken-easy-02.jpg" width="50%"/></p>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#ruecken">
+					<article class="no-mainNavigation" data-mark-menu="#ruecken" data-next-btn="Training abschließen">
 					   <h2>Rücken - Bewertung</h2>
 							<div class="col-md-12 col-xs-12">
 							Bitte bewerte, wie dir das Video gefallen hat:
@@ -283,6 +303,19 @@
 							</div>
 					</article>
 					
+					<article class="no-mainNavigation hide-subNavigation no-buttons" data-mark-menu="#ruecken">
+					   <h2>"Easy" beendet</h2>
+							<div class="col-md-12 col-xs-12">
+							
+								<div class="bs-callout bs-callout-success">
+								  <h4>Glückwunsch!</h4>
+								  <p>Du hast das Training auf der Stufe "Easy" bewältigt.</p>
+								  
+								  <p><a class="btn btn-success" data-link-src="#brust" role="button" href="#2EanQlkuWRffSKZ" data-target="2EanQlkuWRffSKZ">Zu den nächsten Übungen</a></p>
+								</div>
+							
+							</div>
+					</article>
             </section>
 <!-- Ab hier Medium Bereich -->			
 			<section class="no-last-button">

@@ -6,6 +6,129 @@ ul.listing, .listing li {
 	list-style-type: disc!important;
 }
 
+.mainNavigation ul.dropdown-menu {
+	top: 0;
+	left: 100%;
+	float: none!important;
+}
+
+
+
+.activeDropdown {
+	position: relative!important;
+	display: block!important;
+	top: 100%!important;
+	left: 0!important;
+	box-shadow: none!important;
+	border: none!important;
+	border-radius: 0px!important;
+	z-index: 0!important;
+}
+
+.mainNavigation li.dropdown .activeDropdownHeading {
+	font-weight: bold;
+	background-color: #eee;
+}
+
+.mainNavigation li.dropdown a {
+	color: #000;
+	white-space: normal;
+}
+
+.activeDropdownHeading::after { content: "▼"; color: #000; font-size: 0.8em; font-weight: normal; } {}
+
+.mainNavigation div.panel-heading {
+	border-left: 4px solid #777;
+	border-bottom: none;
+}
+
+.mainNavigation li.dropdown:nth-child(2)  a {
+	border-left: 4px solid #5cb85c!important;
+}
+
+.mainNavigation li.dropdown:nth-child(3)  a {
+	border-left: 4px solid #f0ad4e!important;
+}
+
+.mainNavigation li.dropdown:nth-child(4)  a {
+	border-left: 4px solid #d9534f!important;
+}
+
+.activeDropdown li a {
+	padding: 8px!important;
+	padding-left: 20px!important;
+}
+
+.activeDropdown li.active a, .activeDropdown li.active a:hover {
+	background: #f5f5f5;
+	color: #000;
+} 
+
+
+
+
+.glyphicon {
+	margin-right: 8px;
+}
+
+.green-icon {
+	color: #00bb46;
+}
+
+.orange-icon {
+	color: #f7ba00;
+}
+
+.red-icon {
+	color: #f70023;
+}
+
+.fancybox {
+	margin-bottom: 10px;
+	display: block;
+	position: relative;
+}
+
+.fancybox { z-index: 0; }
+
+.fancybox::before { content: "Klicken zum Vergrößern"; color: #000; position: absolute; bottom: 2px; left: 0px; z-index: 1; width: 100%; text-align: center; background: rgba(255, 255, 255, 0.5); padding: 2px; font-size: 0.9em;}
+
+/* Bootstrap Callout-Box */
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+
+.bs-callout-info {
+    border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+    color: #5bc0de;
+}
+
+.bs-callout-success {
+    border-left-color: #5cb85c;
+}
+.bs-callout-success h4 {
+    color: #5cb85c;
+}
+
 /*Cursor:Pointer*/
 .draggable, .snapTarget	{ cursor:pointer;  }
 

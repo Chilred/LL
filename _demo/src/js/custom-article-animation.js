@@ -44,6 +44,16 @@ App.SectionManager.showArticle = (function() {
 			// get article that is supposed to be shown
 			var article = App.SectionManager.articles[arg[0]];
 			
+			// Rebuild main navigation
+			$(".mainNavigation ul.dropdown-menu").find('li').parent().removeClass('activeDropdown');
+			$(".activeDropdownHeading").removeClass('activeDropdownHeading');
+			
+			var activeElement = $(".mainNavigation ul.dropdown-menu").find('li[data-target="' + article.id + '"]');
+			
+			activeElement.parent().addClass('activeDropdown');
+			activeElement.parent().prev().addClass('activeDropdownHeading');
+			
+			// Animation stuff
 			animationSpeedIn = Number.parseInt(getAnimationData(article, 'animation-speed-in'));
 			animationTypeIn = getAnimationData(article, 'animation-type-in');
 			var elem;
