@@ -41,7 +41,7 @@
 	<script src="src/js/remove-element.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/remove-last-buttons.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/link-main-navigation.js" type="text/javascript" charset="utf-8"></script>
-	
+	<script src="src/js/s.js"></script>
 	<script src="src/js/Chart.js"></script>
 	<script type="text/javascript" src="src/js/ranking.js"></script>
 	
@@ -100,21 +100,16 @@
 		<h3>About</h3>
 			<section data-linear="2" class="no-buttons no-mainNavigation">
                 <h1>Menüzeug</h1>
-					<article data-menu-id="#art0">
+					<article  class="no-mainNavigation hide-subNavigation no-buttons" data-menu-id="#art0">
 					   <h2>Startseite</h2>
-
+						<div class="start"><img src="src/images/start.png" width="100%"></img></div>
+						</br>
+						<button class="btn btn-block btn-default" data-link-src="#warmup"><b>Training starten</b></button>
 					</article>
 					<article data-menu-id="#art1">
 					   <h2>About</h2>
-						<div class="col-md-4 col-xs-4">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-						</div>
-						<div class="module popcorn">
-							<p data-jump-to="0">Einleitung</p>
-							<p data-jump-to="10">Ausführung der Übung</p>
-							<p data-jump-to="50">Zusammenfassung</p>
-						</div>
-						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
+						Dieses Training ist eine gemeinsame studentische Arbeit von Studierenden der Technischen Hochschule Mittelhessen und der Justus-Liebig Universität Gießen im Rahmen des Seminars <b>„Lernen und Lehren mit Medien“</b> unter der Leitung von Prof. Dr. Ulrich Glowalla, Benjamin Rupp und Felix Rupp.
+</br></br>Verantwortliche: Eric Oelschlegel, Mads Feddersen, Martin Wunderlich, Mattia Agus, Malte Schoon, Boban Jordanoski.
 					</article>
 					<article data-menu-id="#art2">
 					   <h2>Glossary</h2>
@@ -132,11 +127,14 @@
 						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
 					</article>
 					<article data-menu-id="#art4">
-					   <h2>PAPST</h2>
-						<div class="col-md-4 col-xs-4">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-						</div>
-						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
+					   <h2>PAPS-Test</h2>
+						Für eine erste Einschätzung Ihres individuellen gesundheitlichen Risikos beim Sport nutzen Sie unseren so genannten „Persönlichen Aktivitäts- und Präventions-Screening-Test“ (PAPS-Test). Diese „Online-Vorsorgeuntersuchung“ hilft Ihnen, in 2 - 3 Minuten wichtige Anhaltspunkte für Ihren nächsten Arztbesuch oder Check-up zu erhalten. Eine Auswertung erhalten Sie am Schluss des Fragebogens.
+						</br> Der Test wird vom Deutschen Leichtathletikverband sowie in vergleichbarer Form auch von der Deutschen Gesellschaft für Sportmedizin und Prävention als wichtiges präventives Instrument empfohlen.
+							</br></br>
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe  class="embed-responsive-item" src="https://www.paps-test.de/de/survey/s1" name="paps" scrolling="auto" frameborder="no" align="center" height = "600px" width = "900px">
+								</iframe>
+							</div>
 					</article>
             </section>
 			<section class="no-last-button">
@@ -152,41 +150,33 @@
 					
 					<article data-next-btn="Weiter zum Video" data-menu-id="#warmup">
 					   <h2>Erste Aufwärmübung</h2>
-						<div class="col-md-8 col-xs-8">
-						
-						<h3>Ausgangsstellung</h3>
-
-						<ul class="listing">
-							<li>Arme stützen seitlich auf Brusthöhe</li>
-							<li>Knie liegen am Boden auf</li>
-						</ul>
-
-						<h3>Ausführung</h3>
-
-						<ul class="listing">
-						<li>Arme strecken und beugen (Nasenspitze berührt fast den Boden)</li>
-
-						<li>Rumpf und Kopf in einer Linie halten</li>
-						</ul>
-
-						Tipp: Je weiter du den Griff wählst, desto intensiver wirkt die Übung auf die Brustmuskulatur. 
-
-						Je enger, desto mehr werden die Arme beansprucht!
+												<div class="col-md-5 col-xs-5">
+							<h4><b>Sorgfältiges Auf- und Abwärmen</b></h4>
+									Das Aufwärmen bereitet den Körper auf die nachfolgende Belastung vor. Dazu eignen sich in erster Linie Ganzkörperbewegungen. 
+							<h4><b>Richtige Ausgangsstellung</b></h4>
+									Wähle bei den Übungen eine stabile und sichere Ausgangsposition, beachte dabei genau die beschriebene Körperposition. Ein Abweichen davon kann zu Belastungen der benachbarten Gelenke führen und ist oft ein Zeichen für Kraft- und Bewegungsdefizite. In diesem Fall solltest du eine leichtere Übung wählen.						
+							<h4><b>Pausen einhalten</b></h4>
+									Dein Krafttraining ist besonders effektiv, wenn du deinen Muskeln zwischen den einzelnen Trainingseinheiten mindestens einen Tag Pause zur Regeneration gönnst. Besonderen Wert solltest du auch darauf legen bei deinem Training mit hohen Wiederholungszahlen die vorgegebenen Zeiten für die Pausen einzuhalten, damit sich die Muskulatur wieder erholen kann. Zu kurze Pausen können einen frühzeitigen Abbruch des Trainings zur Folge haben. Je nach Leistungsvermögen kannst du die Pausen durch Lockerungs- und Entspannungsübungen gestalten.
 						</div>
-						<div class="col-md-4 col-xs-4">
-							<a class="fancybox thumbnail" title="Schritt 1" rel="group_bauch_easy" href="data/images/lq/bauch-easy-01.JPG"><img src="data/images/lq/bauch-easy-01.JPG" width="100%"/></a>
-							<a class="fancybox thumbnail" title="Schritt 2" rel="group_bauch_easy" href="data/images/lq/bauch-easy-02.JPG"><img src="data/images/lq/bauch-easy-02.JPG" width="100%"/></a>
-						</div>
+						<div class="col-md-5 col-xs-5">
+							<h4><b>Zeitdruck vermeiden</b></h4>
+									Nimm dir für dein Training entsprechend Zeit. Zeitdruck führt zu Unkonzentriertheit und zu schnellen Bewegungsausführungen. Darunter leidet die Qualität deiner Bewegungsausführung, und es besteht Verletzungsgefahr.
+							<h4><b>Optimale Bewegungsausführung und Bewegungsgeschwindigkeit</b></h4>
+									Jede Übung sollte zuerst einmal langsam ausgeführt werden, um die Technik und den richtigen Bewegungsablauf zu erlernen und zu speichern. Dynamische Übungen sollten langsam und möglichst ohne Schwung ausgeführt werden, statische Übungen sollten nur mit mäßigem Bewegungstempo oder in der Endposition haltend trainiert werden.
+							<h4><b>Gleichmäßiges Atmen</b></h4>
+									Wichtig ist bei allen Übungen eine gleichmäßige ruhige Atmung, niemals den Atem pressen. Atme im Moment der größten Anstrengung bzw. der Anspannungsphase einer Übung bewusst aus. Atme bei der geringeren Belastung bzw. während der Entspannungsphase ein.
+									Beachte folgenden Grundsatz:</br></br>
+									<ul class="listing">
+									<li><b>A</b>nspannung: <b>A</b>usatmen</li>
+									<li><b>E</b>ntspannung: <b>E</b>inatmen</li> </ul>
+									<b>Niemals die Luft anhalten!</b>							
+							</div>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#warmup">
-					   <h2>Brust - Video</h2>
-					   <div class="module popcorn">
-							<p data-jump-to="0">Einleitung</p>
-							<p data-jump-to="10">Ausführung der Übung</p>
-							<p data-jump-to="50">Zusammenfassung</p>
+					   <h2>Aufwärmen - Video</h2>
+					    <div class="embed-responsive embed-responsive-16by9">
+								<iframe  class="embed-responsive-item" src="https://www.youtube.com/embed/g7KOup7VfJE" frameborder="0" allowfullscreen></iframe>
 						</div>
-						<div class="module video"><p data-src="data/video/brust_easy.mp4"></p></div>
-						
 					</article>
             </section>
 <!-- Ab hier Easy Bereich -->
@@ -225,17 +215,17 @@
 						Je enger, desto mehr werden die Arme beansprucht!
 						</div>
 						<div class="col-md-4 col-xs-4">
-							<a class="fancybox thumbnail" title="Schritt 1" rel="group_bauch_easy" href="data/images/lq/bauch-easy-01.JPG"><img src="data/images/lq/bauch-easy-01.JPG" width="100%"/></a>
-							<a class="fancybox thumbnail" title="Schritt 2" rel="group_bauch_easy" href="data/images/lq/bauch-easy-02.JPG"><img src="data/images/lq/bauch-easy-02.JPG" width="100%"/></a>
+							<a class="fancybox thumbnail" title="Schritt 1" rel="group_brust_easy" href="data/images/lq/brust-easy-01.JPG"><img src="data/images/lq/brust-easy-01.JPG" width="100%"/></a>
+							<a class="fancybox thumbnail" title="Schritt 2" rel="group_brust_easy" href="data/images/lq/brust-easy-02.JPG"><img src="data/images/lq/brust-easy-02.JPG" width="100%"/></a>
 						</div>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#brust">
 					   <h2>Brust - Video</h2>
-					   <div class="module popcorn">
+					   <!--<div class="module popcorn">
 							<p data-jump-to="0">Einleitung</p>
 							<p data-jump-to="10">Ausführung der Übung</p>
 							<p data-jump-to="50">Zusammenfassung</p>
-						</div>
+						</div>-->
 						<div class="module video"><p data-src="data/video/brust_easy.mp4"></p></div>
 						
 					</article>
@@ -274,14 +264,13 @@
 							Achte auf eine langsame Bewegungsausführung!
 						</div>
 						<div class="col-md-4 col-xs-4">
-							<p data-title="Schritt 1"><img src="data/images/lq/bauch-easy-01.JPG" width="100%"/></p>
-							<p data-title="Schritt 2"><img src="data/images/lq/bauch-easy-01.JPG" width="100%"/></p>
+							<a class="fancybox thumbnail" title="Schritt 1" rel="group_bauch_easy" href="data/images/lq/bauch-easy-01.JPG"><img src="data/images/lq/bauch-easy-01.JPG" width="100%"/></a>
+							<a class="fancybox thumbnail" title="Schritt 2" rel="group_bauch_easy" href="data/images/lq/bauch-easy-02.JPG"><img src="data/images/lq/bauch-easy-02.JPG" width="100%"/></a>
 						</div>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#bauch">
 					   <h2>Bauch - Video</h2>
-						<p data-title="Schritt 1"><img src="data/images/lq/bauch-easy-01.JPG" width="50%"/></p>
-						<p data-title="Schritt 2"><img src="data/images/lq/bauch-easy-02.JPG" width="50%"/></p>
+						<img src="data/images/gif/bauch-easy.gif" width="80%"/>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#bauch">
 					   <h2>Bauch - Bewertung</h2>
@@ -324,14 +313,13 @@
 							Je größer der Kniewinkel, desto schwieriger und effektiver wird die Übung!
 						</div>
 						<div class="col-md-4 col-xs-4">
-							<p data-title="Schritt 1"><img src="data/images/lq/ruecken-easy-01.JPG" width="100%"/></p>
-							<p data-title="Schritt 2"><img src="data/images/lq/ruecken-easy-02.JPG" width="100%"/></p>
+							<a class="fancybox thumbnail" title="Schritt 1" rel="group_ruecken_easy" href="data/images/lq/ruecken-easy-01.JPG"><img src="data/images/lq/ruecken-easy-01.JPG" width="100%"/></a>
+							<a class="fancybox thumbnail" title="Schritt 2" rel="group_ruecken_easy" href="data/images/lq/ruecken-easy-02.JPG"><img src="data/images/lq/ruecken-easy-02.JPG" width="100%"/></a>
 						</div>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#ruecken">
 					   <h2>Rücken - Video</h2>
-						<p data-title="Schritt 1"><img src="data/images/lq/ruecken-easy-01.jpg" width="50%"/></p>
-						<p data-title="Schritt 2"><img src="data/images/lq/ruecken-easy-02.jpg" width="50%"/></p>
+						<img src="data/images/gif/ruecken-easy.gif" width="80%"/>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#ruecken" data-next-btn="Training abschließen">
 					   <h2>Rücken - Bewertung</h2>
@@ -361,7 +349,7 @@
 								  <h4>Glückwunsch!</h4>
 								  <p>Du hast das Training auf der Stufe "Easy" bewältigt.</p>
 								  
-								  <p><a class="btn btn-success" data-link-src="#brust" role="button" href="#2EanQlkuWRffSKZ" data-target="2EanQlkuWRffSKZ">Zu den nächsten Übungen</a></p>
+								  <p><a class="btn btn-success" data-link-src="#brustMedium" role="button" href="#2EanQlkuWRffSKZ" data-target="2EanQlkuWRffSKZ">Zu den nächsten Übungen</a></p>
 								</div>
 							
 							</div>
@@ -398,16 +386,19 @@
 							<h3>Tipp</h3>
 							Je weiter du den Griff wählst, desto intensiver wirkt die Übung auf die Brustmuskulatur. Je enger, desto mehr werden die Arme beansprucht!
 						</div>
-						<p data-title="Schritt 1"><img src="data/images/lq/brust-medium-01.JPG" width="50%"/></p>
+						<div class="col-md-4 col-xs-4">
+							<a class="fancybox thumbnail" title="Schritt 1" rel="group_brust_medium" href="data/images/lq/brust-medium-01.JPG"><img src="data/images/lq/brust-medium-01.JPG" width="100%"/></a>
+							<a class="fancybox thumbnail" title="Schritt 2" rel="group_brust_medium" href="data/images/lq/brust-medium-02.JPG"><img src="data/images/lq/brust-medium-02.JPG" width="100%"/></a>
+						</div>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#brustMedium">
 					   <h2>Brust - Video</h2>
-						<div class="module video"><p data-src="data/video/brust_middle.mp4"></p></div>
-						<div class="module popcorn">
+						<div class="module video"><p data-src="data/video/brust_medium.mp4"></p></div>
+						 <!--<div class="module popcorn">
 							<p data-jump-to="0">Einleitung</p>
 							<p data-jump-to="10">Ausführung der Übung</p>
 							<p data-jump-to="50">Zusammenfassung</p>
-						</div>
+						</div> -->
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#brustMedium">
 					   <h2>Brust - Bewertung</h2>
@@ -443,17 +434,13 @@
 							Achte auf eine langsame Bewegungs- ausführung – Keine Radfahrbewegungen!
 						</div>
 						<div class="col-md-4 col-xs-4">
-						<p data-title="Schritt 1"><img src="data/images/lq/bauch-medium-01.JPG" width="100%"/></p>
-						<p data-title="Schritt 2"><img src="data/images/lq/bauch-medium-02.JPG" width="100%"/></p>
+							<a class="fancybox thumbnail" title="Schritt 1" rel="group_bauch_medium" href="data/images/lq/bauch-medium-01.JPG"><img src="data/images/lq/bauch-medium-01.JPG" width="100%"/></a>
+							<a class="fancybox thumbnail" title="Schritt 2" rel="group_bauch_medium" href="data/images/lq/bauch-medium-02.JPG"><img src="data/images/lq/bauch-medium-02.JPG" width="100%"/></a>
 						</div>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#bauchMedium">
 					   <h2>Bauch - Video</h2>
-					   <div class="col-md-4 col-xs-4">
-						<p data-title="Schritt 1"><img src="data/images/lq/bauch-medium-01.JPG" width="100%"/></p>
-						<p data-title="Schritt 2"><img src="data/images/lq/bauch-medium-02.JPG" width="100%"/></p>
-											
-						</div>
+							<img src="data/images/gif/bauch-medium.gif" width="80%"/>					
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#bauchMedium">
 					   <h2>Bauch - Bewertung</h2>
@@ -490,14 +477,13 @@
 							Je größer der Kniewinkel, desto schwieriger und effektiver wird die Übung!
 						</div>
 						<div class="col-md-4 col-xs-4">
-						<p data-title="Schritt 1"><img src="data/images/lq/ruecken-easy-01.JPG" width="100%"/></p>
-						<p data-title="Schritt 2"><img src="data/images/lq/ruecken-easy-02.JPG" width="100%"/></p>
+							<a class="fancybox thumbnail" title="Schritt 1" rel="group_ruecken_medium" href="data/images/lq/ruecken-medium-01.JPG"><img src="data/images/lq/ruecken-medium-01.JPG" width="100%"/></a>
+							<a class="fancybox thumbnail" title="Schritt 2" rel="group_ruecken_medium" href="data/images/lq/ruecken-medium-02.JPG"><img src="data/images/lq/ruecken-medium-02.JPG" width="100%"/></a>
 						</div>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#rueckenMedium">
 					   <h2>Rücken - Video</h2>
-						<p data-title="Schritt 1"><img src="data/images/lq/bauch-medium-01.JPG" width="100%"/></p>
-						<p data-title="Schritt 2"><img src="data/images/lq/bauch-medium-02.JPG" width="100%"/></p>
+						<img src="data/images/gif/ruecken-medium.gif" width="80%"/>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#rueckenMedium">
 					   <h2>Rücken - Bewertung</h2>
@@ -514,7 +500,23 @@
 							</div>
 							</div>
 					</article>		
-            </section>
+            
+			
+			<article class="no-mainNavigation hide-subNavigation no-buttons" data-mark-menu="#rueckenMedium">
+					   <h2>"Medium" beendet</h2>
+							<div class="col-md-12 col-xs-12">
+							
+								<div class="bs-callout bs-callout-success">
+								  <h4>Glückwunsch!</h4>
+								  <p>Du hast das Training auf der Stufe "Medium" bewältigt.</p>
+								  
+								  <p><a class="btn btn-success" data-link-src="#brustHard" role="button" href="#MVnPllaNPcnHJ1r" data-target="MVnPllaNPcnHJ1r">Zu den nächsten Übungen</a></p>
+								</div>
+							
+							</div>
+					</article>
+					
+			</section>
 <!-- Ab hier Hard Bereich -->
 			<section class="no-last-button">
                 <h1>Hard</h1> 
@@ -547,16 +549,15 @@
 							Nicht ins Hohlkreuz fallen!
 						</div>
 						<div class="col-md-4 col-xs-4">
-						<p data-title="Schritt 1"><img src="data/images/lq/ruecken-easy-01.JPG" width="100%"/></p>
-						<p data-title="Schritt 2"><img src="data/images/lq/ruecken-easy-02.JPG" width="100%"/></p>
+							<a class="fancybox thumbnail" title="Schritt 1" rel="group_brust_hart" href="data/images/lq/brust-hart-01.JPG"><img src="data/images/lq/brust-hart-01.JPG" width="100%"/></a>
+							<a class="fancybox thumbnail" title="Schritt 2" rel="group_brust_hart" href="data/images/lq/brust-hart-02.JPG"><img src="data/images/lq/brust-hart-02.JPG" width="100%"/></a>
 						</div>
 						
 						
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#brustHard">
 					   <h2>Brust - Video</h2>
-						<p data-title="Schritt 1"><img src="data/images/lq/brust-schwer-01.JPG" width="100%"/></p>
-						<p data-title="Schritt 2"><img src="data/images/lq/brust-schwer-02.JPG" width="100%"/></p>
+						<img src="data/images/gif/brust-hart.gif" width="80%"/>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#brustHard">
 					   <h2>Brust - Bewertung</h2>
@@ -594,14 +595,13 @@
 							Tipp: Nicht mit Schwung üben!
 						</div>
 						<div class="col-md-4 col-xs-4">
-						<p data-title="Schritt 1"><img src="data/images/lq/ruecken-easy-01.JPG" width="100%"/></p>
-						<p data-title="Schritt 2"><img src="data/images/lq/ruecken-easy-02.JPG" width="100%"/></p>
+							<a class="fancybox thumbnail" title="Schritt 1" rel="group_bauch_hart" href="data/images/lq/bauch-hart-01.JPG"><img src="data/images/lq/bauch-hart-01.JPG" width="100%"/></a>
+							<a class="fancybox thumbnail" title="Schritt 2" rel="group_bauch_hart" href="data/images/lq/bauch-hart-02.JPG"><img src="data/images/lq/bauch-hart-02.JPG" width="100%"/></a>
 						</div>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#bauchHard">
 					   <h2>Bauch - Video</h2>
-						<p data-title="Schritt 1"><img src="data/images/lq/bauch-hart-01.jpg" width="100%"/></p>
-						<p data-title="Schritt 2"><img src="data/images/lq/bauch-hart-02.jpg" width="100%"/></p>
+						<img src="data/images/gif/bauch-hart.gif" width="80%"/>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#bauchHard">
 					   <h2>Bauch - Bewertung</h2>
@@ -639,14 +639,13 @@
 							Achte darauf, dass der Kopf in Verlängerung der Wirbelsäule bleibt und nicht überstreckt wird. Blick zum Boden!
 						</div>
 						<div class="col-md-4 col-xs-4">
-						<p data-title="Schritt 1"><img src="data/images/lq/ruecken-easy-01.JPG" width="100%"/></p>
-						<p data-title="Schritt 2"><img src="data/images/lq/ruecken-easy-02.JPG" width="100%"/></p>
+							<a class="fancybox thumbnail" title="Schritt 1" rel="group_ruecken_hart" href="data/images/lq/ruecken-hart-01.JPG"><img src="data/images/lq/ruecken-hart-01.JPG" width="100%"/></a>
+							<a class="fancybox thumbnail" title="Schritt 2" rel="group_ruecken_hart" href="data/images/lq/ruecken-hart-02.JPG"><img src="data/images/lq/ruecken-hart-02.JPG" width="100%"/></a>
 						</div>
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#rueckenHard">
 					   <h2>Rücken - Video</h2>
-						<p data-title="Schritt 1"><img src="data/images/lq/ruecken-schwer-01.JPG" width="100%"/></p>
-						<p data-title="Schritt 2"><img src="data/images/lq/ruecken-schwer-02.JPG" width="100%"/></p>
+						<img src="data/images/gif/ruecken-hart.gif" width="80%" />
 					</article>
 					<article class="no-mainNavigation" data-mark-menu="#rueckenHard">
 					   <h2>Rücken - Bewertung</h2>
