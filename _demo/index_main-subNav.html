@@ -47,37 +47,6 @@
 	<script type="text/javascript" src="src/js/ranking.js"></script>
 	
 	<script type="text/javascript" src="src/plugins/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-	
-	<script>
-		var xmlHttpObject = ranking.connection(),
-		selectedGroup;
-		
-		function handleContent(){
-			var doughnutData=ranking.getRanking(selectedGroup),
-			element = "chart-area_"+ selectedGroup;
-			canvascontent ='<canvas id="canvas_'+element+'" width="10" height="10"/>',
-			document.getElementById(element).innerHTML =canvascontent;
-			ctx = document.getElementById("canvas_"+element).getContext("2d"),
-			//ctx.clearRect(0, 0, canvas.width, canvas.height);
-			chart = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
-		}
-		
-		function saveContent(group,star){
-			selectedGroup =group;
-			var file = "src/ranking.php";
-			ranking.saveContent(file,group,star);
-		}
-		
-		$(document).ready(function() {
-			$(".fancybox").fancybox({
-				helpers : {
-					title: {
-						type: 'over'
-					}
-				}
-			});
-		});
-	</script>
 
    </head>
 <body data-animation-type-in="fadeIn" data-animation-speed-in="300" data-animation-type-out="fadeOut" data-animation-speed-out="100">
@@ -134,10 +103,10 @@
 					<article data-menu-id="#art3">
 					   <h2>Download</h2>
 						<div class="col-md-4 col-xs-4">
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+						Die folgende PDF Datei soll zur Unterstützung, sowie als Feedback für sich selbst dienen. Der Vordruck dient des Weiteren auch als Trainingsplan. Notiert werden Sätze und Wiederholungen, um 
+						den eigenen Fortschritt überwachen zu können. Wichtig ist es hierbei, dass Sie nach/ während des Trainings diesen Plan ausfüllen.
+						
 						</div>
-						<div class="module video" data-video-width="8"><p data-src="data/video/cat.mp4"></p></div>
-
 					</article>
 					<article data-menu-id="#art4">
 					   <h2>PAPS-Test</h2>
@@ -228,25 +197,6 @@
 							<p data-jump-to="50">Zusammenfassung</p>
 						</div>-->
 						<div class="module video"><p data-src="data/video/brust_easy.mp4"></p></div>
-						
-					</article>
-					<article class="no-mainNavigation" data-mark-menu="#brust">
-					   <h2>Brust - Bewertung</h2>
-							<div class="col-md-12 col-xs-12">
-							Bitte bewerte, wie dir das Video gefallen hat:
-							<div class="acidjs-rating-stars">
-								<form>
-									<input type="radio" name="chest_easy" id="group-1-0" value="5" onClick="saveContent(this.name,5)" /><label for="group-1-0"></label>
-									<input type="radio" name="chest_easy" id="group-1-1" value="4" onClick="saveContent(this.name,4)" /><label for="group-1-1"></label>
-									<input type="radio" checked="checked" name="chest_easy" id="group-1-2" value="3" onClick="saveContent(this.name,3)" /><label for="group-1-2"></label>
-									<input type="radio" name="chest_easy" id="group-1-3" value="2" onClick="saveContent(this.name,2)"/><label for="group-1-3"></label>
-									<input type="radio" name="chest_easy" id="group-1-4"  value="1" onClick="saveContent(this.name,1)"/><label for="group-1-4"></label>
-								</form>
-								<div id="chart-area_chest_easy">
-									<!--<canvas id="chart-area" width="100" height="100"/>-->
-								</div>
-							</div>
-							</div>
 					</article>
 	<!-- Brust Ende -->				
 					<article data-prev-btn='Zurück zum Video "Brust"' data-menu-id="#bauch">
@@ -272,26 +222,6 @@
 					<article class="no-mainNavigation" data-mark-menu="#bauch">
 					   <h2>Bauch - Video</h2>
 						<img src="data/images/gif/bauch-easy.gif" width="80%"/>
-					</article>
-					<article class="no-mainNavigation" data-mark-menu="#bauch">
-					   <h2>Bauch - Bewertung</h2>
-							<div class="col-md-12 col-xs-12">
-							Bitte bewerte, wie dir das Video gefallen hat:
-							
-							<div class="acidjs-rating-stars">
-								<form>
-									<input type="radio" name="belly_easy" id="group-2-0" value="5" onClick="saveContent(this.name,5)" /><label for="group-2-0"></label>
-									<input type="radio" name="belly_easy" id="group-2-1" value="4" onClick="saveContent(this.name,4)" /><label for="group-2-1"></label>
-									<input type="radio" checked="checked" name="belly_easy" id="group-2-2" value="3" onClick="saveContent(this.name,3)" /><label for="group-2-2"></label>
-									<input type="radio" name="belly_easy" id="group-2-3" value="2" onClick="saveContent(this.name,2)"/><label for="group-2-3"></label>
-									<input type="radio" name="belly_easy" id="group-2-4"  value="1" onClick="saveContent(this.name,1)"/><label for="group-2-4"></label>
-								</form>
-								<div id="chart-area_belly_easy">
-									<!--<canvas id="chart-area" width="100" height="100"/>-->
-								</div>
-							</div>
-							
-							
 					</article>
 		<!-- Bauch Ende -->			
 					<article data-menu-id="#ruecken">
@@ -321,27 +251,7 @@
 					<article class="no-mainNavigation" data-mark-menu="#ruecken">
 					   <h2>Rücken - Video</h2>
 						<img src="data/images/gif/ruecken-easy.gif" width="80%"/>
-					</article>
-					<article class="no-mainNavigation" data-mark-menu="#ruecken" data-next-btn="Training abschließen">
-					   <h2>Rücken - Bewertung</h2>
-							<div class="col-md-12 col-xs-12">
-							Bitte bewerte, wie dir das Video gefallen hat:
-							<div class="acidjs-rating-stars">
-								<form>
-									<input type="radio" name="rear_easy" id="group-3-0" value="5" onClick="saveContent(this.name,5)" /><label for="group-3-0"></label>
-									<input type="radio" name="rear_easy" id="group-3-1" value="4" onClick="saveContent(this.name,4)" /><label for="group-3-1"></label>
-									<input type="radio" checked="checked" name="rear_easy" id="group-3-2" value="3" onClick="saveContent(this.name,3)" /><label for="group-3-2"></label>
-									<input type="radio" name="rear_easy" id="group-3-3" value="2" onClick="saveContent(this.name,2)"/><label for="group-3-3"></label>
-									<input type="radio" name="rear_easy" id="group-3-4"  value="1" onClick="saveContent(this.name,1)"/><label for="group-3-4"></label>
-								</form>
-								<div id="chart-area_rear_easy">
-									<!--<canvas id="chart-area" width="100" height="100"/>-->
-								</div>
-							</div>
-							
-							</div>
-					</article>
-					
+					</article>					
 					<article class="no-mainNavigation hide-subNavigation no-buttons" data-mark-menu="#ruecken">
 					   <h2>"Easy" beendet</h2>
 							<div class="col-md-12 col-xs-12">
@@ -401,21 +311,6 @@
 							<p data-jump-to="50">Zusammenfassung</p>
 						</div> -->
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#brustMedium">
-					   <h2>Brust - Bewertung</h2>
-							<div class="col-md-12 col-xs-12">
-							Bitte bewerte, wie dir das Video gefallen hat:
-							<div class="acidjs-rating-stars">
-							<form>
-							<input type="radio" name="group-2" id="group-2-0" value="5" /><label for="group-2-0"></label><!--
-							--><input type="radio" name="group-2" id="group-2-1" value="4" /><label for="group-2-1"></label><!--
-							--><input type="radio" checked="checked" name="group-2" id="group-2-2" value="3" /><label for="group-2-2"></label><!--
-							--><input type="radio" name="group-2" id="group-2-3" value="2" /><label for="group-2-3"></label><!--
-							--><input type="radio" name="group-2" id="group-2-4"  value="1" /><label for="group-2-4"></label>
-							</form>
-							</div>
-							</div>
-					</article>
 		<!-- Brust Ende -->
 					<article data-prev-btn='Zurück zum Video "Brust"' data-menu-id="#bauchMedium">
 					<h2>Bauch - Halber Käfer</h2>
@@ -442,21 +337,6 @@
 					<article class="no-mainNavigation" data-mark-menu="#bauchMedium">
 					   <h2>Bauch - Video</h2>
 							<img src="data/images/gif/bauch-medium.gif" width="80%"/>					
-					</article>
-					<article class="no-mainNavigation" data-mark-menu="#bauchMedium">
-					   <h2>Bauch - Bewertung</h2>
-							<div class="col-md-12 col-xs-12">
-							Bitte bewerte, wie dir das Video gefallen hat:
-							<div class="acidjs-rating-stars">
-							<form>
-							<input type="radio" name="group-2" id="group-2-0" value="5" /><label for="group-2-0"></label><!--
-							--><input type="radio" name="group-2" id="group-2-1" value="4" /><label for="group-2-1"></label><!--
-							--><input type="radio" checked="checked" name="group-2" id="group-2-2" value="3" /><label for="group-2-2"></label><!--
-							--><input type="radio" name="group-2" id="group-2-3" value="2" /><label for="group-2-3"></label><!--
-							--><input type="radio" name="group-2" id="group-2-4"  value="1" /><label for="group-2-4"></label>
-							</form>
-							</div>
-							</div>
 					</article>
 		<!-- Bauch Ende -->
 					<article data-menu-id="#rueckenMedium">
@@ -485,23 +365,7 @@
 					<article class="no-mainNavigation" data-mark-menu="#rueckenMedium">
 					   <h2>Rücken - Video</h2>
 						<img src="data/images/gif/ruecken-medium.gif" width="80%"/>
-					</article>
-					<article class="no-mainNavigation" data-mark-menu="#rueckenMedium">
-					   <h2>Rücken - Bewertung</h2>
-							<div class="col-md-12 col-xs-12">
-							Bitte bewerte, wie dir das Video gefallen hat:
-							<div class="acidjs-rating-stars">
-							<form>
-							<input type="radio" name="group-2" id="group-2-0" value="5" /><label for="group-2-0"></label><!--
-							--><input type="radio" name="group-2" id="group-2-1" value="4" /><label for="group-2-1"></label><!--
-							--><input type="radio" checked="checked" name="group-2" id="group-2-2" value="3" /><label for="group-2-2"></label><!--
-							--><input type="radio" name="group-2" id="group-2-3" value="2" /><label for="group-2-3"></label><!--
-							--><input type="radio" name="group-2" id="group-2-4"  value="1" /><label for="group-2-4"></label>
-							</form>
-							</div>
-							</div>
-					</article>		
-            
+					</article>         
 			
 			<article class="no-mainNavigation hide-subNavigation no-buttons" data-mark-menu="#rueckenMedium">
 					   <h2>"Medium" beendet</h2>
@@ -560,21 +424,6 @@
 					   <h2>Brust - Video</h2>
 						<img src="data/images/gif/brust-hart.gif" width="80%"/>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#brustHard">
-					   <h2>Brust - Bewertung</h2>
-							<div class="col-md-12 col-xs-12">
-							Bitte bewerte, wie dir das Video gefallen hat:
-							<div class="acidjs-rating-stars">
-							<form>
-							<input type="radio" name="group-2" id="group-2-0" value="5" /><label for="group-2-0"></label><!--
-							--><input type="radio" name="group-2" id="group-2-1" value="4" /><label for="group-2-1"></label><!--
-							--><input type="radio" checked="checked" name="group-2" id="group-2-2" value="3" /><label for="group-2-2"></label><!--
-							--><input type="radio" name="group-2" id="group-2-3" value="2" /><label for="group-2-3"></label><!--
-							--><input type="radio" name="group-2" id="group-2-4"  value="1" /><label for="group-2-4"></label>
-							</form>
-							</div>
-							</div>
-					</article>
 		<!-- Brust Ende -->
 					<article class="no-menu" data-prev-btn='Zurück zum Video "Brust"' data-menu-id="#bauchHard">
 					<h2>Bauch - Hüftheben</h2>
@@ -604,21 +453,6 @@
 					   <h2>Bauch - Video</h2>
 						<img src="data/images/gif/bauch-hart.gif" width="80%"/>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#bauchHard">
-					   <h2>Bauch - Bewertung</h2>
-							<div class="col-md-12 col-xs-12">
-							Bitte bewerte, wie dir das Video gefallen hat:
-							<div class="acidjs-rating-stars">
-							<form>
-							<input type="radio" name="group-2" id="group-2-0" value="5" /><label for="group-2-0"></label><!--
-							--><input type="radio" name="group-2" id="group-2-1" value="4" /><label for="group-2-1"></label><!--
-							--><input type="radio" checked="checked" name="group-2" id="group-2-2" value="3" /><label for="group-2-2"></label><!--
-							--><input type="radio" name="group-2" id="group-2-3" value="2" /><label for="group-2-3"></label><!--
-							--><input type="radio" name="group-2" id="group-2-4"  value="1" /><label for="group-2-4"></label>
-							</form>
-							</div>
-							</div>
-					</article>
 		<!-- Bauch Ende -->
 					<article data-menu-id="#rueckenHard">
 					   <h2>Rücken - Einführung</h2>
@@ -647,21 +481,6 @@
 					<article class="no-mainNavigation" data-mark-menu="#rueckenHard">
 					   <h2>Rücken - Video</h2>
 						<img src="data/images/gif/ruecken-hart.gif" width="80%" />
-					</article>
-					<article class="no-mainNavigation" data-mark-menu="#rueckenHard">
-					   <h2>Rücken - Bewertung</h2>
-							<div class="col-md-12 col-xs-12">
-							Bitte bewerte, wie dir das Video gefallen hat:
-							<div class="acidjs-rating-stars">
-							<form>
-							<input type="radio" name="group-2" id="group-2-0" value="5" /><label for="group-2-0"></label><!--
-							--><input type="radio" name="group-2" id="group-2-1" value="4" /><label for="group-2-1"></label><!--
-							--><input type="radio" checked="checked" name="group-2" id="group-2-2" value="3" /><label for="group-2-2"></label><!--
-							--><input type="radio" name="group-2" id="group-2-3" value="2" /><label for="group-2-3"></label><!--
-							--><input type="radio" name="group-2" id="group-2-4"  value="1" /><label for="group-2-4"></label>
-							</form>
-							</div>
-							</div>
 					</article>
             </section>
 			
