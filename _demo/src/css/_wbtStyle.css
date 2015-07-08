@@ -236,10 +236,6 @@ text-align:center;}
 	padding-right: 17px!important;
 }
 
-/*
-a.navbar-brand {
-	font-size:20px;
-	color: #0096ff!important;
-	text-shadow: rgb(224, 224, 224) 1px 1px 0px;
-
-}*/
+.dropdown-menu {
+min-width:110px!important;
+}
