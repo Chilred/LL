@@ -82,12 +82,22 @@ App.SectionManager.showArticle = (function() {
 		if(App.SectionManager.firstRun) {
 			// call original function on first run
 			cached_function.apply(this, arguments);
+			// pause videos on new article
+			$("video").each(function(){
+				$(this).get(0).pause();
+			});
+			
 			if(App.SectionManager.articles[arguments[0]].selector.hasClass('hide-subNavigation')) {
 				$(".sidebar-nav").parent().hide();
 				$(".sidebar-nav").parent().next().removeAttr('class');
 				$(".sidebar-nav").parent().next().addClass('col-md-12 col-xs-12');
 			}
 		} else {
+			// pause videos on new article
+			$("video").each(function(){
+				$(this).get(0).pause();
+			});
+		
 			// get current article that is supposed to be faded out
 			var currentArticle = App.SectionManager.articles[App.SectionManager.currentArticle];
 			
