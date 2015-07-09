@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="src/css/bootstrap-theme.css"/>
 	<link rel="stylesheet" href="src/css/stars.css"/>
 	<link rel="stylesheet" href="src/plugins/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Quicksand:300,400,700|Gaslight' rel='stylesheet' type='text/css'>
 
    <!-- JS -->
     <script src="src/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -21,7 +21,6 @@
 	<script src="src/js/modal.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/loacalStorage.js" type="text/javascript" charset="utf-8"></script>
     <script src="src/js/framework.js" type="text/javascript" charset="utf-8"></script>
-	<script src="src/js/popcorn-complete.min.js"></script>
    <!-- JS-Module -->
    <script src="src/js/accordion.js" type="text/javascript" charset="utf-8"></script>
    <script src="src/js/video.js" type="text/javascript" charset="utf-8"></script>
@@ -42,9 +41,6 @@
 	<script src="src/js/remove-element.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/remove-last-buttons.js" type="text/javascript" charset="utf-8"></script>
 	<script src="src/js/link-main-navigation.js" type="text/javascript" charset="utf-8"></script>
-	<script src="src/js/s.js"></script>
-	<script src="src/js/Chart.js"></script>
-	<script type="text/javascript" src="src/js/ranking.js"></script>
 	
 	<script type="text/javascript" src="src/plugins/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
@@ -70,12 +66,15 @@
 
 		<h3>About</h3>
 			<section data-linear="2" class="no-buttons no-mainNavigation">
-                <h1>Menüzeug</h1>
-					<article  class="start no-mainNavigation hide-subNavigation no-buttons" data-menu-id="#art0">
+                <h1>Hauptseite</h1>
+					<article  class="no-mainNavigation hide-subNavigation no-buttons" data-menu-id="#art0">
 					   <h2>Startseite</h2>
-						<div class="start"><img src="src/images/start.png" width="100%"></img></div>
-						</br>
-						<button class="btn btn-block btn-default" data-link-src="#warmup"><b>Training starten</b></button>
+						<div class="start">
+							<div>
+								<button class="btn btn-lg btn-primary" data-link-src="#warmup_start">Training starten</button>
+							</div>
+							<img src="src/images/start.png" width="100%"></img>
+						</div>
 					</article>
 					
 					<article  class="no-mainNavigation hide-subNavigation no-buttons" data-menu-id="#training">
@@ -86,39 +85,43 @@
 						<div class="col-md-6 col-xs-6">
 								<div class="bs-callout bs-callout-primary bs-warmup">
 								  <h4>Aufwärmen</h4>
-								  <p>Bla bla bla</p>
+								  <p>Vor jedem Training sollte man sich aufwärmen, um Sportverletzungen vorzubeugen. Hier gibt es ein Aufwärmvideo als Grundlage für jeden Schwierigkeitsgrad.</p>
 								  
-								  <p><a class="btn btn-primary" data-link-src="#brustMedium" role="button" href="#2EanQlkuWRffSKZ" data-target="2EanQlkuWRffSKZ">Mit dem Aufwärmen beginnen</a></p>
-								</div>
-								<div class="bs-callout bs-callout-warning bs-medium">
-								  <h4>Medium</h4>
-								  <p>Bla bla bla.</p>
-								  
-								  <p><a class="btn btn-warning" data-link-src="#brustMedium" role="button" href="#2EanQlkuWRffSKZ" data-target="2EanQlkuWRffSKZ">Training "Medium" starten</a></p>
+								  <p><a class="btn btn-primary" data-link-src="#warmup" role="button">Mit Aufwärmen beginnen</a></p>
 								</div>
 						</div>
 						<div class="col-md-6 col-xs-6">
 								<div class="bs-callout bs-callout-success bs-easy">
 								  <h4>Easy</h4>
-								  <p>Bla bla bla.</p>
+								  <p>Diese Schwierigkeitsstufe eignet sich für Anfänger und Wiedereinsteiger. Für die Ausübung wird weniger Kraft und Balance benötigt und das Verletzungsrisiko ist geringer als bei den übrigen Schwierigkeitsgraden.</p>
 								  
-								  <p><a class="btn btn-success" data-link-src="#brustMedium" role="button" href="#2EanQlkuWRffSKZ" data-target="2EanQlkuWRffSKZ">Training "Easy" starten</a></p>
+								  <p><a class="btn btn-success" data-link-src="#brust" role="button">Training "Easy" starten</a></p>
 								</div>
+						</div>
+						<div class="col-md-6 col-xs-6">
+								<div class="bs-callout bs-callout-warning bs-medium">
+								  <h4>Medium</h4>
+								  <p>Dieser Schwierigkeitsgrad eignet sich für Fortgeschrittene und fitte Personen, die die vorige Schwierigkeiststufe ohne große Anstrengung meistern.</p>
+								  
+								  <p><a class="btn btn-warning" data-link-src="#brustMedium" role="button">Training "Medium" starten</a></p>
+								</div>
+						</div>
+						<div class="col-md-6 col-xs-6">
 								<div class="bs-callout bs-callout-danger bs-hard">
 								  <h4>Hard</h4>
-								  <p>Bla bla bla.</p>
+								  <p>Für alle Personen, denen der Medium-Schwierigkeitsgrad nicht mehr genügend Anstrenung abverlangt. Die jeweils leichteren Übungen sollten sehr gut beherrscht werden, damit es nicht zu Verletzungen kommt.</p>
 								  
-								  <p><a class="btn btn-danger" data-link-src="#brustMedium" role="button" href="#2EanQlkuWRffSKZ" data-target="2EanQlkuWRffSKZ">Training "Hard" starten</a></p>
+								  <p><a class="btn btn-danger" data-link-src="#brustHard" role="button">Training "Hard" starten</a></p>
 								</div>
 						</div>
 						
 						<p>
 						<b>Viel Erfolg beim Trainieren wünscht</b><br />
-						euer Fit ohne Geräte Team
+						<span class="signature">euer <span>Fit ohne Geräte</span> Team</span>
 						</p>
 					</article>
 					
-					<article data-menu-id="#art2">
+					<article class="hide-subNavigation" data-menu-id="#art2">
 					   <h2>Hinweise</h2>
 							<h4><b>Sorgfältiges Auf- und Abwärmen</b></h4>
 									Das Aufwärmen bereitet den Körper auf die nachfolgende Belastung vor. Dazu eignen sich in erster Linie Ganzkörperbewegungen. 
@@ -134,10 +137,11 @@
 							<br/><br/><h4><b>Gleichmäßiges Atmen</b></h4>
 									Wichtig ist bei allen Übungen eine gleichmäßige ruhige Atmung, niemals den Atem pressen. Atme im Moment der größten Anstrengung bzw. der Anspannungsphase einer Übung bewusst aus. Atme bei der geringeren Belastung bzw. während der Entspannungsphase ein.
 									Beachte folgenden Grundsatz:<br/><br/><br/>
-									<div class="aaee"><b>A</b>nspannung: <b>A</b>usatmen <b>E</b>ntspannung: <b>E</b>inatmen<br/><br/><b>Niemals die Luft anhalten!</b></div>
+									<div class="importantNotice"><span class="highlight">A</span>nspannung: <span class="highlight">A</span>usatmen <span class="highlight">E</span>ntspannung: <span class="highlight">E</span>inatmen
+									<br/><br/><span class="highlight">Niemals die Luft anhalten!</span></div>
 
 					</article>
-					<article data-menu-id="#art3">
+					<article class="hide-subNavigation" data-menu-id="#art3">
 					   <h2>Download</h2>
 						<div class="media">
 						  <div class="media-left">
@@ -160,7 +164,7 @@
 						</div>
 					</article>
 					
-					<article data-menu-id="#art4">
+					<article class="hide-subNavigation" data-menu-id="#art4">
 					   <h2>PAPS-Test</h2>
 						Für eine erste Einschätzung Ihres individuellen gesundheitlichen Risikos beim Sport nutzen Sie unseren so genannten „Persönlichen Aktivitäts- und Präventions-Screening-Test“ (PAPS-Test). Diese „Online-Vorsorgeuntersuchung“ hilft Ihnen, in 2 - 3 Minuten wichtige Anhaltspunkte für Ihren nächsten Arztbesuch oder Check-up zu erhalten. Eine Auswertung erhalten Sie am Schluss des Fragebogens.
 						</br> Der Test wird vom Deutschen Leichtathletikverband sowie in vergleichbarer Form auch von der Deutschen Gesellschaft für Sportmedizin und Prävention als wichtiges präventives Instrument empfohlen.
@@ -170,20 +174,20 @@
 								</iframe>
 							</div>
 					</article>
-					<article data-menu-id="#art1">
+					<article class="hide-subNavigation" data-menu-id="#art1">
 					   <h2>About</h2>
 						Dieses Training ist eine gemeinsame studentische Arbeit von Studierenden der Technischen Hochschule Mittelhessen und der Justus-Liebig Universität Gießen im Rahmen des Seminars <b>„Lernen und Lehren mit Medien“</b> unter der Leitung von Prof. Dr. Ulrich Glowalla, Benjamin Rupp und Felix Rupp.
 						<br/><br/>Verantwortliche: Eric Oelschlegel, Mads Feddersen, Martin Wunderlich, Mattia Agus, Malte Schoon, Boban Jordanoski.
 					</article>
             </section>
-			<section class="no-last-button">
+			<section class="no-last-button" data-is-training="true">
                 <h1>Aufwärmen</h1>
-					<article class="hide-subNavigation no-buttons jumbotron-article">
+					<article class="hide-subNavigation no-buttons jumbotron-article" data-menu-id="#warmup_start">
 					   <h2>Aufwärmen</h2>
 
 						<div class="module jumbotron" data-background="jumbotron_warmup.jpg">
-						  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et...</p>
-						  <button data-link-src="#warmup">Training starten</button>
+						  <p>Vor jedem Training sollte man sich aufwärmen, um Sportverletzungen vorzubeugen. Hier gibt es ein Aufwärmvideo als Grundlage für jeden Schwierigkeitsgrad.</p>
+						  <button data-link-src="#warmup">Aufwärmen beginnen</button>
 						</div>
 					</article>
 					
@@ -206,18 +210,18 @@
 					</article>
             </section>
 <!-- Ab hier Easy Bereich -->
-            <section class="no-last-button">
+            <section class="no-last-button" data-is-training="true">
                 <h1>Easy</h1>
 					<article class="hide-subNavigation no-buttons jumbotron-article">
 					   <h2>Easy</h2>
 
 						<div class="module jumbotron" data-background="jumbotron_brust.jpg">
-						  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et...</p>
+						  <p>Diese Schwierigkeitsstufe eignet sich für Anfänger und Wiedereinsteiger. Für die Ausübung wird weniger Kraft und Balance benötigt und das Verletzungsrisiko ist geringer als bei den übrigen Schwierigkeitsgraden.</p>
 						  <button data-link-src="#brust">Training starten</button>
 						</div>
 					</article>
 					
-					<article data-next-btn="Weiter zum Video" data-menu-id="#brust">
+					<article data-prev-btn='Zurück zur Übersicht "Easy"' data-next-btn="Weiter zum Video" data-menu-id="#brust">
 					   <h2>Brust - Knieliegestütz</h2>
 						<div class="col-md-8 col-xs-8">
 						
@@ -246,8 +250,8 @@
 							<a class="fancybox thumbnail" title="Schritt 2" rel="group_brust_easy" href="data/images/lq/brust-easy-02.JPG"><img src="data/images/lq/brust-easy-02.JPG" width="100%"/></a>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#brust">
-					   <h2>Brust - Video</h2>
+					<article data-prev-btn='Zurück zur Beschreibung' class="no-mainNavigation" data-mark-menu="#brust">
+					   <h2>Brust - Knieliegestütz - Video</h2>
 					   <!--<div class="module popcorn">
 							<p data-jump-to="0">Einleitung</p>
 							<p data-jump-to="10">Ausführung der Übung</p>
@@ -256,7 +260,7 @@
 						<div class="module video"><p data-src="data/video/brust_easy.mp4"></p></div>
 					</article>
 	<!-- Brust Ende -->				
-					<article data-prev-btn='Zurück zum Video "Brust"' data-menu-id="#bauch">
+					<article data-prev-btn='Zurück zum Video "Knieliegestütz"' data-next-btn="Weiter zum Video" data-menu-id="#bauch">
 					   <h2>Bauch - Crunches</h2>
 						<div class="col-md-8 col-xs-8">
 							<h3>Ausgangsstellung</h3>
@@ -276,12 +280,12 @@
 							<a class="fancybox thumbnail" title="Schritt 2" rel="group_bauch_easy" href="data/images/lq/bauch-easy-02.JPG"><img src="data/images/lq/bauch-easy-02.JPG" width="100%"/></a>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#bauch">
-					   <h2>Bauch - Video</h2>
+					<article data-prev-btn='Zurück zur Beschreibung' class="no-mainNavigation" data-mark-menu="#bauch">
+					   <h2>Bauch - Crunches - Video</h2>
 						<img src="data/images/gif/bauch-easy.gif" width="80%"/>
 					</article>
 		<!-- Bauch Ende -->			
-					<article data-menu-id="#ruecken">
+					<article data-prev-btn='Zurück zum Video "Crunches"' data-next-btn="Weiter zum Video" data-menu-id="#ruecken">
 					   <h2>Rücken - Einführung</h2>
 						<div class="col-md-8 col-xs-8">
 							<h3>Ausgangsstellung</h3>
@@ -305,37 +309,35 @@
 							<a class="fancybox thumbnail" title="Schritt 2" rel="group_ruecken_easy" href="data/images/lq/ruecken-easy-02.JPG"><img src="data/images/lq/ruecken-easy-02.JPG" width="100%"/></a>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#ruecken">
+					<article data-prev-btn='Zurück zur Beschreibung' data-next-btn='Training "Easy" abschließen' class="no-mainNavigation" data-mark-menu="#ruecken">
 					   <h2>Rücken - Video</h2>
 						<img src="data/images/gif/ruecken-easy.gif" width="80%"/>
-					</article>					
+					</article>	
+					
 					<article class="no-mainNavigation hide-subNavigation no-buttons" data-mark-menu="#ruecken">
 					   <h2>"Easy" beendet</h2>
-							<div class="col-md-12 col-xs-12">
-							
-								<div class="bs-callout bs-callout-success">
+							<div class="bs-callout bs-callout-success">
 								  <h4>Glückwunsch!</h4>
-								  <p>Du hast das Training auf der Stufe "Easy" bewältigt.</p>
+								  <p>Du hast das Training auf der Stufe "Easy" bewältigt. Hast du den Trainingsplan für dein heutiges Training schon ausgefüllt? Wie, du hast noch keinen Trainingsplan? <a href="#" data-link-src="#art3">Dann lade ihn dir hier herunter</a>!</p>
 								  
-								  <p><a class="btn btn-success" data-link-src="#brustMedium" role="button" href="#2EanQlkuWRffSKZ" data-target="2EanQlkuWRffSKZ">Zu den nächsten Übungen</a></p>
+								  <p><a class="btn btn-success" data-link-src="#brustMedium" role="button">Zu den nächsten Übungen</a></p>
 								</div>
 							
-							</div>
 					</article>
             </section>
 <!-- Ab hier Medium Bereich -->			
-			<section class="no-last-button">
+			<section class="no-last-button" data-is-training="true">
                 <h1>Medium</h1> 
 					<article class="hide-subNavigation no-buttons jumbotron-article">
 					   <h2>Medium</h2>
 
 						<div class="module jumbotron" data-background="jumbotron_bauch_mittel.jpg">
-						  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et...</p>
+						  <p>Dieser Schwierigkeitsgrad eignet sich für Fortgeschrittene und fitte Personen, die die vorige Schwierigkeiststufe ohne große Anstrengung meistern.</p>
 						  <button data-link-src="#brustMedium">Training starten</button>
 						</div>
 					</article>
 				
-					<article data-menu-id="#brustMedium">
+					<article data-prev-btn='Zurück zur Übersicht "Medium"' data-next-btn="Weiter zum Video" data-menu-id="#brustMedium">
 					   <h2>Brust - Liegestütze</h2>
 						<div class="col-md-8 col-xs-8">
 							<h3>Ausgangsstellung</h3>
@@ -359,8 +361,8 @@
 							<a class="fancybox thumbnail" title="Schritt 2" rel="group_brust_medium" href="data/images/lq/brust-medium-02.JPG"><img src="data/images/lq/brust-medium-02.JPG" width="100%"/></a>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#brustMedium">
-					   <h2>Brust - Video</h2>
+					<article data-prev-btn='Zurück zur Beschreibung' class="no-mainNavigation" data-mark-menu="#brustMedium">
+					   <h2>Brust - Liegestütze - Video</h2>
 						<div class="module video"><p data-src="data/video/brust_medium.mp4"></p></div>
 						 <!--<div class="module popcorn">
 							<p data-jump-to="0">Einleitung</p>
@@ -369,7 +371,7 @@
 						</div> -->
 					</article>
 		<!-- Brust Ende -->
-					<article data-prev-btn='Zurück zum Video "Brust"' data-menu-id="#bauchMedium">
+					<article data-prev-btn='Zurück zum Video "Liegestütze"' data-next-btn="Weiter zum Video" data-menu-id="#bauchMedium">
 					<h2>Bauch - Halber Käfer</h2>
 						<div class="col-md-8 col-xs-8">
 							<h3>Ausgangsstellung</h3>
@@ -391,12 +393,12 @@
 							<a class="fancybox thumbnail" title="Schritt 2" rel="group_bauch_medium" href="data/images/lq/bauch-medium-02.JPG"><img src="data/images/lq/bauch-medium-02.JPG" width="100%"/></a>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#bauchMedium">
-					   <h2>Bauch - Video</h2>
+					<article data-prev-btn='Zurück zur Beschreibung' class="no-mainNavigation" data-mark-menu="#bauchMedium">
+					   <h2>Bauch - Halber Käfer - Video</h2>
 							<img src="data/images/gif/bauch-medium.gif" width="80%"/>					
 					</article>
 		<!-- Bauch Ende -->
-					<article data-menu-id="#rueckenMedium">
+					<article data-prev-btn='Zurück zum Video "Halber Käfer"' data-next-btn="Weiter zum Video" data-menu-id="#rueckenMedium">
 					   <h2>Rücken - Einführung</h2>
 						<div class="col-md-8 col-xs-8">
 						<h3>Ausgangsstellung</h3>
@@ -419,7 +421,7 @@
 							<a class="fancybox thumbnail" title="Schritt 2" rel="group_ruecken_medium" href="data/images/lq/ruecken-medium-02.JPG"><img src="data/images/lq/ruecken-medium-02.JPG" width="100%"/></a>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#rueckenMedium">
+					<article data-prev-btn='Zurück zur Beschreibung' data-next-btn='Training "Medium" abschließen' class="no-mainNavigation" data-mark-menu="#rueckenMedium">
 					   <h2>Rücken - Video</h2>
 						<img src="data/images/gif/ruecken-medium.gif" width="80%"/>
 					</article>         
@@ -428,11 +430,11 @@
 					   <h2>"Medium" beendet</h2>
 							<div class="col-md-12 col-xs-12">
 							
-								<div class="bs-callout bs-callout-success">
+								<div class="bs-callout bs-callout-warning">
 								  <h4>Glückwunsch!</h4>
-								  <p>Du hast das Training auf der Stufe "Medium" bewältigt.</p>
+								  <p>Du hast das Training auf der Stufe "Medium" bewältigt. Hast du den Trainingsplan für dein heutiges Training schon ausgefüllt? Wie, du hast noch keinen Trainingsplan? <a href="#" data-link-src="#art3">Dann lade ihn dir hier herunter</a>!</p>
 								  
-								  <p><a class="btn btn-success" data-link-src="#brustHard" role="button" href="#MVnPllaNPcnHJ1r" data-target="MVnPllaNPcnHJ1r">Zu den nächsten Übungen</a></p>
+								  <p><a class="btn btn-warning" data-link-src="#brustHard" role="button">Zu den nächsten Übungen</a></p>
 								</div>
 							
 							</div>
@@ -440,18 +442,18 @@
 					
 			</section>
 <!-- Ab hier Hard Bereich -->
-			<section class="no-last-button">
+			<section class="no-last-button" data-is-training="true">
                 <h1>Hard</h1> 
 					<article class="hide-subNavigation no-buttons jumbotron-article">
 					   <h2>Hard</h2>
 
 						<div class="module jumbotron" data-background="jumbotron_beine_schwer.jpg">
-						  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et...</p>
+						  <p>Für alle Personen, denen der Medium-Schwierigkeitsgrad nicht mehr genügend Anstrenung abverlangt. Die jeweils leichteren Übungen sollten sehr gut beherrscht werden, damit es nicht zu Verletzungen kommt.</p>
 						  <button data-link-src="#brustHard">Training starten</button>
 						</div>
 					</article>
 				
-					<article data-menu-id="#brustHard">
+					<article data-prev-btn='Zurück zur Übersicht "Hard"' data-next-btn="Weiter zum Video" data-menu-id="#brustHard">
 					   <h2>Brust - Erhöhter Liegestütz</h2>
 						<div class="col-md-8 col-xs-8">
 						<h3>Ausgangsstellung</h3>
@@ -477,12 +479,12 @@
 						
 						
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#brustHard">
-					   <h2>Brust - Video</h2>
+					<article data-prev-btn='Zurück zur Beschreibung' class="no-mainNavigation" data-mark-menu="#brustHard">
+					   <h2>Brust - Erhöhter Liegestütz - Video</h2>
 						<img src="data/images/gif/brust-hart.gif" width="80%"/>
 					</article>
 		<!-- Brust Ende -->
-					<article class="no-menu" data-prev-btn='Zurück zum Video "Brust"' data-menu-id="#bauchHard">
+					<article data-prev-btn='Zurück zum Video "Erhöhter Liegestütz"' data-next-btn="Weiter zum Video" class="no-menu" data-menu-id="#bauchHard">
 					<h2>Bauch - Hüftheben</h2>
 						<div class="col-md-8 col-xs-8">
 						<h3>Ausgangsstellung</h3>
@@ -506,12 +508,12 @@
 							<a class="fancybox thumbnail" title="Schritt 2" rel="group_bauch_hart" href="data/images/lq/bauch-hart-02.JPG"><img src="data/images/lq/bauch-hart-02.JPG" width="100%"/></a>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#bauchHard">
-					   <h2>Bauch - Video</h2>
+					<article data-prev-btn='Zurück zur Beschreibung' class="no-mainNavigation" data-mark-menu="#bauchHard">
+					   <h2>Bauch - Hüftheben - Video</h2>
 						<img src="data/images/gif/bauch-hart.gif" width="80%"/>
 					</article>
 		<!-- Bauch Ende -->
-					<article data-menu-id="#rueckenHard">
+					<article data-prev-btn='Zurück zum Video "Hüftheben"' data-next-btn="Weiter zum Video" data-menu-id="#rueckenHard">
 					   <h2>Rücken - Einführung</h2>
 						<div class="col-md-8 col-xs-8">
 						<h3>Ausgangsstellung</h3>
@@ -535,9 +537,22 @@
 							<a class="fancybox thumbnail" title="Schritt 2" rel="group_ruecken_hart" href="data/images/lq/ruecken-hart-02.JPG"><img src="data/images/lq/ruecken-hart-02.JPG" width="100%"/></a>
 						</div>
 					</article>
-					<article class="no-mainNavigation" data-mark-menu="#rueckenHard">
+					<article data-prev-btn='Zurück zur Beschreibung' data-next-btn='Training "Hard" abschließen' class="no-mainNavigation" data-mark-menu="#rueckenHard">
 					   <h2>Rücken - Video</h2>
 						<img src="data/images/gif/ruecken-hart.gif" width="80%" />
+					</article>
+					<article class="no-mainNavigation hide-subNavigation no-buttons" data-mark-menu="#rueckenHard">
+					   <h2>"Hard" beendet</h2>
+							<div class="col-md-12 col-xs-12">
+							
+								<div class="bs-callout bs-callout-danger">
+								  <h4>Glückwunsch!</h4>
+								  <p>Du hast das Training auf der Stufe "Hard" bewältigt. Hast du den Trainingsplan für dein heutiges Training schon ausgefüllt? Wie, du hast noch keinen Trainingsplan? <a href="#" data-link-src="#art3">Dann lade ihn dir hier herunter</a>!</p>
+								  
+								  <p><a class="btn btn-danger" data-link-src="#brustHard" role="button">Noch einmal?</a></p>
+								</div>
+							
+							</div>
 					</article>
             </section>
 			

@@ -11,6 +11,7 @@ article:not(.jumbotron-article) {
 	padding-top: 14px!important;
 	padding-bottom: 10px!important;
 	padding-left: 14px!important;
+	padding-right: 14px!important;
 	margin-top: 26px!important;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
 	border-radius: 4px;
@@ -18,15 +19,17 @@ article:not(.jumbotron-article) {
 
 article:not(.jumbotron-article) h2 {
 	padding-left: 14px!important;
-	margin: 0px 10px 10px 0px;
+	margin-top: 0px;
+	margin-bottom: 10px;
 	border-bottom: 2px solid #0096ff;
 	padding-bottom: 9px;
 	text-transform: uppercase;
 	font-family: 'Quicksand', sans-serif;
 }
 
-article:not(.jumbotron-article) > div {
+article:not(.jumbotron-article) > div:not(.bs-callout) {
 	padding-left: 0px!important;
+	padding-right: 0px!important;
 }
 
 .mainNavigation {
@@ -148,6 +151,20 @@ a.navbar-brand {
 
 .fancybox::before { content: "Klicken zum Vergrößern"; color: #000; position: absolute; bottom: 2px; left: 0px; z-index: 1; width: 100%; text-align: center; background: rgba(255, 255, 255, 0.5); padding: 2px; font-size: 0.9em;}
 
+.signature {
+	font-family: 'Gaslight', cursive;
+	font-size: 14px;
+}
+
+.signature span {
+	color: #0096ff;
+}
+
+.highlight {
+	color: #0096ff;
+	font-weight: bold;
+}
+
 /* Bootstrap Callout-Box */
 .bs-callout {
     padding: 20px;
@@ -156,6 +173,11 @@ a.navbar-brand {
     border-left-width: 5px;
     border-radius: 3px;
 }
+
+.bs-warmup, .bs-medium {
+    margin-right: 14px;
+}
+
 .bs-callout h4 {
     margin-top: 0;
     margin-bottom: 5px;
@@ -232,7 +254,6 @@ a.navbar-brand {
 /* Footer */
 .footer {
 	padding-top: 20px!important;
-	padding-right: 17px!important;
 	clear: both;
 }
 
@@ -282,7 +303,7 @@ display:none!important;
 	text-align: center;
 }
 
-.aaee{
+.importantNotice{
 font-size:18px;
 text-align:center;}
 
