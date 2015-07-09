@@ -25,6 +25,10 @@ article:not(.jumbotron-article) h2 {
 	font-family: 'Quicksand', sans-serif;
 }
 
+article:not(.jumbotron-article) > div {
+	padding-left: 0px!important;
+}
+
 .mainNavigation {
 	background: #fff!important;
 }
@@ -189,6 +193,7 @@ a.navbar-brand {
 /* Footer */
 .footer {
 	padding-top: 20px!important;
+	padding-right: 17px!important;
 	clear: both;
 }
 
@@ -213,6 +218,7 @@ a.navbar-brand {
 	margin-top: 30px;
 	background-size: 100%;
 	background-position: center center;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
 }
 
 .jumbotron h2 {
@@ -231,11 +237,6 @@ display:none!important;
 .aaee{
 font-size:18px;
 text-align:center;}
-
-.footer {
-	padding-left: 15px!important;
-	padding-right: 17px!important;
-}
 
 .dropdown-menu {
 min-width:110px!important;
