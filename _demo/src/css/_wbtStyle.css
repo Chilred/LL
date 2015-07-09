@@ -4,6 +4,11 @@
 html, body, .container {
 	background: #fafafa!important;
 	font-family: 'PT Sans', sans-serif;
+	font-size: 16px;
+}
+
+.btn {
+		font-size: 16px!important;
 }
 
 article:not(.jumbotron-article) {
@@ -303,13 +308,24 @@ display:none!important;
 	position: absolute;
 	z-index: 2;
 	width: 100%;
-	bottom: 40px;
+	top: 170px;
 	text-align: center;
+}
+
+.start button {
+	font-size: 30px!important;
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.6);
 }
 
 .importantNotice{
 font-size:18px;
-text-align:center;}
+text-align:center;
+}
+
+.gif-video {
+	width: 100%;
+	text-align: center;
+}
 
 .dropdown-menu {
 min-width:110px!important;
