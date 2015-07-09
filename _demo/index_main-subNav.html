@@ -43,6 +43,18 @@
 	<script src="src/js/link-main-navigation.js" type="text/javascript" charset="utf-8"></script>
 	
 	<script type="text/javascript" src="src/plugins/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	
+	<script>
+		$(document).ready(function() {
+			$(".fancybox").fancybox({
+				helpers : {
+					title: {
+						type: 'over'
+					}
+				}
+			});
+		});
+	</script>
 
    </head>
 <body data-animation-type-in="fadeIn" data-animation-speed-in="300" data-animation-type-out="fadeOut" data-animation-speed-out="100">

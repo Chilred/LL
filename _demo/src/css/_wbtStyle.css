@@ -178,6 +178,10 @@ a.navbar-brand {
     margin-right: 14px;
 }
 
+.bs-easy, .bs-hard {
+    margin-left: 14px;
+}
+
 .bs-callout h4 {
     margin-top: 0;
     margin-bottom: 5px;
@@ -228,7 +232,7 @@ a.navbar-brand {
     color: #5bc0de;
 }
 .bs-callout {
-	background-size: 100%;
+	background-size: cover;
 	background-position: center center;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
 }
@@ -276,7 +280,7 @@ a.navbar-brand {
 /* Jumbotron */
 .jumbotron {
 	margin-top: 30px;
-	background-size: 100%;
+	background-size: cover;
 	background-position: center center;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
 }
