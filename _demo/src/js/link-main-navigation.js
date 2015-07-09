@@ -7,6 +7,8 @@ App.NavigationManager.buildMainNavigation = (function() {
 		cached_function.apply(this, arguments);
 
 			var listElements = $(".mainNavigation ul.nav").find('li.dropdown');
+			
+			listElements.first().next().find('a').addClass('warmup-heading');
 		
 			listElements.each(function(index){
 				var _t = $(this);
