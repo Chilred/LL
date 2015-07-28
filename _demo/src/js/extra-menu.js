@@ -2,7 +2,7 @@
  * MODULE - Extra-Menu
  *
  * MODULE DESCRIPTION:
- * This module allows to add an extra menu for specifiv articles you specify yourself
+ * This module allows to add an extra menu for articles you specify yourself
  *
  * MODULE MARKUP
  *

@@ -1,5 +1,12 @@
-// Expands the App.SectionManager.showArticle() function from framework.js
-// Adds custom animation for displaying an article
+/**
+ * ADD-ON - Link Main Navigation
+ *
+ * DESCRIPTION:
+ * Modifies the structure of the main navigation so it's no longer a dropdown menu. 
+ *
+ *
+ */
+ 
 App.NavigationManager.buildMainNavigation = (function() {
 	var cached_function = App.NavigationManager.buildMainNavigation;
 
@@ -8,8 +15,10 @@ App.NavigationManager.buildMainNavigation = (function() {
 
 			var listElements = $(".mainNavigation ul.nav").find('li.dropdown');
 			
+			// special class for first section in navigation (in this case warm-up)
 			listElements.first().next().find('a').addClass('warmup-heading');
-		
+			
+			// build navigation links and register click event to show article on click
 			listElements.each(function(index){
 				var _t = $(this);
 				

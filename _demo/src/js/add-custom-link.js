@@ -14,7 +14,7 @@
  * 'add-custom-link'
  */
  
-// register the removing function
+// register the link-adding function
 App.Event.register("add-custom-link", function(obj){
 	
 	var dataLinkSrc = obj.data('link-src');
